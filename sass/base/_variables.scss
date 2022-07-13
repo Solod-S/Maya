@@ -1,0 +1,17 @@
+:root {
+  --primary-text-banner-color: #ffffff;
+  --primary-title-subtitle-color: #303030;
+  --secondary-text-banner-color-transparent: rgba(157, 164, 189, 0.6);
+  --secondary-text-banner-color: #9da4bd;
+  --primary-text-color: #555555;
+  --advantages-block-color: #f7f7f7;
+  --accent-color: #ff6c00;
+  --black-color: #000000;
+}
+// -------------BREAKPOINTS--------------
+$breakpointBeeforeTell: 479px;
+$breakpointTell: 480px;
+$breakpointBeeforeTablet: 767px;
+$breakpointTablet: 768px;
+$breakpointBeeforeDesktop: 1199px;
+$breakpointDesktop: 1200px;
