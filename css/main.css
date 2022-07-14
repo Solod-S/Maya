@@ -263,13 +263,6 @@ summary {
 
 :root {
   --primary-text-banner-color: #ffffff;
-  --primary-title-subtitle-color: #303030;
-  --secondary-text-banner-color-transparent: rgba(157, 164, 189, 0.6);
-  --secondary-text-banner-color: #9da4bd;
-  --primary-text-color: #555555;
-  --advantages-block-color: #f7f7f7;
-  --accent-color: #ff6c00;
-  --black-color: #000000;
 }
 
 html {
@@ -386,5 +379,32 @@ a {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   margin: -1px;
+}
+
+.header__title {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--primary-text-banner-color);
+  background: rgba(197, 127, 153, 0.5);
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

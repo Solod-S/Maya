@@ -1,0 +1,41 @@
+.header {
+  &__title {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--primary-text-banner-color);
+
+    background: rgba(197, 127, 153, 0.5);
+  }
+  &__wrapper {
+    display: flex;
+  }
+}
+
+.navigation {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// .header__title {
+// }
+// .logo {
+// }
+// .logo__img {
+// }
+
+// .navigation__item {
+// }
+// .navigation__link {
+// }
+// .header__contact {
+// }
+// .contacts__svg {
+// }
