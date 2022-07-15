@@ -1,7 +1,12 @@
 .header {
+  background: rgba(197, 127, 153, 0.5);
+  height: 60px;
+  position: absolute;
+  width: 100%;
   &__title {
     padding-top: 18px;
     padding-bottom: 18px;
+    margin-bottom: 43px;
 
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -9,11 +14,28 @@
     line-height: 22px;
     text-align: center;
     color: var(--primary-text-banner-color);
-
-    background: rgba(197, 127, 153, 0.5);
   }
+
   &__wrapper {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .header__contact {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat"; //СКАЧАТЬ
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: calc(29 / 24);
+
+    color: #ffffff;
+  }
+
+  &__svg {
+    margin-right: 18px;
   }
 }
 
@@ -22,6 +44,20 @@
     display: flex;
     align-items: center;
   }
+  .navigation__item {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+  &__link {
+    font-family: "Montserrat"; //СКАЧАТЬ СРИФТЫ
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+
+    color: #ffffff;
+  }
 }
 
 // .header__title {
@@ -29,13 +65,4 @@
 // .logo {
 // }
 // .logo__img {
-// }
-
-// .navigation__item {
-// }
-// .navigation__link {
-// }
-// .header__contact {
-// }
-// .contacts__svg {
 // }
