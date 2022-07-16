@@ -25,17 +25,26 @@
   .header__contact {
     display: flex;
     align-items: center;
-    font-family: "Montserrat"; //СКАЧАТЬ
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: calc(29 / 24);
+    transition: color 250ms linear;
 
     color: #ffffff;
+    &:hover {
+      color: #b95f76;
+    }
+    &:hover .header__svg {
+      stroke: #b95f76;
+    }
   }
 
   &__svg {
     margin-right: 18px;
+    stroke: #ffffff;
+    transition: stroke 250ms linear;
   }
 }
 
@@ -50,19 +59,16 @@
     }
   }
   &__link {
-    font-family: "Montserrat"; //СКАЧАТЬ СРИФТЫ
+    font-family: "Montserrat", sans-serif;
 
     font-weight: 400;
     font-size: 20px;
     line-height: calc(24 / 20);
 
     color: #ffffff;
+    transition: color 250ms linear;
+    &:hover {
+      color: #b95f76;
+    }
   }
 }
-
-// .header__title {
-// }
-// .logo {
-// }
-// .logo__img {
-// }
