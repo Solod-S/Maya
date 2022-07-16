@@ -399,7 +399,10 @@ h4 {
   background: rgba(197, 127, 153, 0.5);
   height: 60px;
   position: absolute;
-  width: 100%;
+  width: 1440px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header__title {

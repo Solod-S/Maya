@@ -2,7 +2,9 @@
   background: rgba(197, 127, 153, 0.5);
   height: 60px;
   position: absolute;
-  width: 100%;
+  width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
   &__title {
     padding-top: 18px;
     padding-bottom: 18px;
