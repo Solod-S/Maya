@@ -264,7 +264,9 @@ summary {
 :root {
   --primary-light-color: #ffffff;
   --primary-accent-color: #b95f76;
+  --secondary-accent-color: rgba(0, 0, 0, 0.5);
   --main-title-color: #4d4d4d;
+  --secondary-title-color: #6d6868;
 }
 
 html {
@@ -492,7 +494,7 @@ h4 {
   color: var(--primary-accent-color);
 }
 
-.hero {
+.main_hero {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(58, 81, 205, 0.1)), to(rgba(58, 81, 205, 0.1))), url(../img/hero.jpg);
   background-image: linear-gradient(to right, rgba(58, 81, 205, 0.1), rgba(58, 81, 205, 0.1)), url(../img/hero.jpg);
   max-width: 1440px;
@@ -502,12 +504,12 @@ h4 {
   padding-top: 342px;
 }
 
-.hero__logo {
+.main_hero__logo {
   margin: 0 auto;
   margin-bottom: 185px;
 }
 
-.hero__text {
+.main_hero__text {
   margin-bottom: 100px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -517,7 +519,7 @@ h4 {
   color: var(--primary-light-color);
 }
 
-.hero__bottom-wrapper {
+.main_hero__bottom-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,7 +531,7 @@ h4 {
           align-items: center;
 }
 
-.hero__btn {
+.main_hero__btn {
   padding: 7px 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -543,12 +545,12 @@ h4 {
   transition: color 250ms linear, border 250ms linear;
 }
 
-.hero__btn:hover, .hero__btn:focus {
+.main_hero__btn:hover, .main_hero__btn:focus {
   color: var(--primary-accent-color);
   border: 1px solid var(--primary-accent-color);
 }
 
-.hero__dots {
+.main_hero__dots {
   position: relative;
   background-color: var(--primary-accent-color);
   border-radius: 5px;
@@ -558,7 +560,7 @@ h4 {
   cursor: pointer;
 }
 
-.hero__dots:before {
+.main_hero__dots:before {
   position: absolute;
   left: -10px;
   content: "";
@@ -570,7 +572,7 @@ h4 {
   padding: 5px;
 }
 
-.hero__dots:after {
+.main_hero__dots:after {
   position: absolute;
   left: 10px;
   content: "";
@@ -615,6 +617,15 @@ h4 {
 .main-catalog__link {
   position: relative;
   border-radius: 10px;
+  -webkit-transition: -webkit-filter 150ms linear;
+  transition: -webkit-filter 150ms linear;
+  transition: filter 150ms linear;
+  transition: filter 150ms linear, -webkit-filter 150ms linear;
+}
+
+.main-catalog__link:hover, .main-catalog__link:focus {
+  -webkit-filter: drop-shadow(0px 0px 4px var(--secondary-accent-color));
+          filter: drop-shadow(0px 0px 4px var(--secondary-accent-color));
 }
 
 .main-catalog__img {
@@ -639,5 +650,68 @@ h4 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-light-color);
+}
+
+.main-novelties {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main-novelties__title {
+  padding-bottom: 114px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: calc(49 / 40);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.main-novelties__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-novelties__item {
+  -webkit-transition: -webkit-filter 150ms linear;
+  transition: -webkit-filter 150ms linear;
+  transition: filter 150ms linear;
+  transition: filter 150ms linear, -webkit-filter 150ms linear;
+}
+
+.main-novelties__item:nth-child(3n + 1) .main-novelties__text {
+  color: var(--primary-light-color);
+}
+
+.main-novelties__item:hover, .main-novelties__item:focus {
+  -webkit-filter: drop-shadow(0px 0px 4px var(--secondary-accent-color));
+          filter: drop-shadow(0px 0px 4px var(--secondary-accent-color));
+}
+
+.main-novelties__link {
+  position: relative;
+}
+
+.main-novelties__img {
+  border-radius: 10px;
+}
+
+.main-novelties__text {
+  padding-bottom: 26px;
+  padding-left: 25px;
+  position: absolute;
+  bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  text-transform: uppercase;
+  color: var(--secondary-title-color);
 }
 /*# sourceMappingURL=main.css.map */
