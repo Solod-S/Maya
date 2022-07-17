@@ -15,7 +15,7 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
-    color: var(--primary-text-banner-color);
+    color: var(--primary-light-color);
   }
 
   &__wrapper {
@@ -25,6 +25,7 @@
   }
 
   .header__contact {
+    padding: 20px 0;
     display: flex;
     align-items: center;
     font-family: "Montserrat", sans-serif;
@@ -34,18 +35,20 @@
     line-height: calc(29 / 24);
     transition: color 250ms linear;
 
-    color: #ffffff;
-    &:hover {
-      color: #b95f76;
+    color: var(--primary-light-color);
+    &:hover,
+    &:focus {
+      color: var(--primary-accent-color);
     }
-    &:hover .header__svg {
-      stroke: #b95f76;
+    &:hover .header__svg,
+    &:focus .header__svg {
+      stroke: var(--primary-accent-color);
     }
   }
 
   &__svg {
     margin-right: 18px;
-    stroke: #ffffff;
+    stroke: var(--primary-light-color);
     transition: stroke 250ms linear;
   }
 }
@@ -55,22 +58,24 @@
     display: flex;
     align-items: center;
   }
-  .navigation__item {
+  &__item {
     &:not(:last-child) {
       margin-right: 100px;
     }
   }
   &__link {
+    padding: 20px 0;
     font-family: "Montserrat", sans-serif;
 
     font-weight: 400;
     font-size: 20px;
     line-height: calc(24 / 20);
 
-    color: #ffffff;
+    color: var(--primary-light-color);
     transition: color 250ms linear;
-    &:hover {
-      color: #b95f76;
+    &:hover,
+    &:focus {
+      color: var(--primary-accent-color);
     }
   }
 }
