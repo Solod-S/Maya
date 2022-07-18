@@ -67,8 +67,15 @@ button {
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+  color: var(--primary-light-color);
+  background-color: var(--primary-btn-color);
+  transition: color 250ms linear, background-color 250ms linear;
 }
-
+button:hover,
+button:focus {
+  color: var(--primary-light-color);
+  background-color: var(--primary-accent-color);
+}
 h1,
 h2,
 h3,

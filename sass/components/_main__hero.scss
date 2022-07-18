@@ -41,12 +41,14 @@
 
     color: var(--primary-light-color);
     border: 1px solid var(--primary-light-color);
+    background-color: transparent;
     border-radius: 5px;
     transition: color 250ms linear, border 250ms linear;
     &:hover,
     &:focus {
       color: var(--primary-accent-color);
       border: 1px solid var(--primary-accent-color);
+      background-color: transparent;
     }
   }
   &__dots {
@@ -82,8 +84,21 @@
       padding: 5px;
     }
   }
-}
-
-.header__next {
-  fill: red;
+  &__btn-next {
+    padding: 10px;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      stroke: var(--primary-accent-color);
+    }
+    &:hover .main_hero__next,
+    &:focus .main_hero__next {
+      stroke: var(--primary-accent-color);
+    }
+  }
+  .main_hero__next {
+    stroke: var(--primary-light-color);
+    transition: stroke 250ms linear;
+  }
 }
