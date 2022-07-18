@@ -807,4 +807,35 @@ h4 {
 .--bold {
   font-weight: 600;
 }
+
+.main-feedback {
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+
+.main-feedback__title {
+  margin-bottom: 134px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: calc(49 / 40);
+  text-align: center;
+  color: var(--main-title-color);
+}
+
+.main-feedback__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -134px;
+  margin-top: -76px;
+}
+
+.main-feedback__item {
+  margin-left: 126px;
+  margin-top: 76px;
+}
 /*# sourceMappingURL=main.css.map */

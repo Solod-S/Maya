@@ -10,5 +10,9 @@
 <symbol id="icon-next" width="11" height="11" viewBox="0 0 10 18" fill="none">
 <path opacity="0.8" d="M1 1L8.77819 8.77816L1 16.5563" stroke="" stroke-width="1.5" stroke-linecap="round"/>
 </symbol>
+
+<symbol id="icon-play" width="23" height="26" viewBox="0 0 23 26" fill="none">
+<path d="M21.5 10.4019C23.5 11.5566 23.5 14.4434 21.5 15.5981L4.99999 25.1244C2.99999 26.2791 0.499999 24.8357 0.499999 22.5263L0.5 3.47372C0.5 1.16431 3 -0.279058 5 0.875643L21.5 10.4019Z" fill="white"/>
+</symbol>
 </defs>
 </svg>

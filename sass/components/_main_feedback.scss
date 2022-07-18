@@ -1,0 +1,34 @@
+.main-feedback {
+  padding-bottom: 200px;
+  padding-top: 200px;
+  &__title {
+    margin-bottom: 134px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: calc(49 / 40);
+    text-align: center;
+
+    color: var(--main-title-color);
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -134px;
+    margin-top: -76px;
+  }
+  &__item {
+    margin-left: 126px;
+    margin-top: 76px;
+  }
+  // .main-feedback__link {
+  // }
+  &__img {
+  }
+}
+
+// .main-feedback__svg {
+// }
+// .main-feedback__text {
+// }
