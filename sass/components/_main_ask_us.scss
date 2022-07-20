@@ -1,0 +1,37 @@
+.main-askus {
+  padding-top: 68px;
+  padding-bottom: 56px;
+  background-image: url(/img/main-askus-bg.jpg);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 13px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: calc(37 / 30);
+
+    color: var(--main-title-color);
+  }
+  &__text {
+    margin-bottom: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    color: var(--main-title-color);
+  }
+}
+
+// .main-askus__btn {
+
+// }

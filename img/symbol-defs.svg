@@ -14,5 +14,11 @@
 <symbol id="icon-play" width="23" height="26" viewBox="0 0 23 26" fill="none">
 <path d="M21.5 10.4019C23.5 11.5566 23.5 14.4434 21.5 15.5981L4.99999 25.1244C2.99999 26.2791 0.499999 24.8357 0.499999 22.5263L0.5 3.47372C0.5 1.16431 3 -0.279058 5 0.875643L21.5 10.4019Z" fill="white"/>
 </symbol>
+
+<symbol id="icon-cross" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M9.89844 19L9.89844 0.999999" stroke="#4D4D4D" stroke-linecap="round"/>
+<path d="M1 9.89966L19 9.89966" stroke="#4D4D4D" stroke-linecap="round"/>
+</symbol>
+
 </defs>
 </svg>
