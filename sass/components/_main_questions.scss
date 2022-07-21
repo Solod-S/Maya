@@ -46,6 +46,10 @@
   &__btn {
     padding: 5px;
     background-color: transparent;
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
   }
 }
 
