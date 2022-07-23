@@ -421,6 +421,7 @@ h4 {
 }
 
 .header {
+  z-index: 22;
   background: rgba(197, 127, 153, 0.5);
   height: 60px;
   position: absolute;
@@ -515,14 +516,33 @@ h4 {
   color: var(--primary-accent-color);
 }
 
-.main_hero {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(58, 81, 205, 0.1)), to(rgba(58, 81, 205, 0.1))), url(../img/hero.jpg);
-  background-image: linear-gradient(to right, rgba(58, 81, 205, 0.1), rgba(58, 81, 205, 0.1)), url(../img/hero.jpg);
+.banner {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.banner .slick-dots {
+  position: absolute;
+  z-index: 1;
+  max-width: 440px;
+  top: 861px;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+}
+
+.main_hero {
+  position: relative;
+}
+
+.main_hero__wrapper {
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   min-height: 922px;
-  padding-top: 342px;
 }
 
 .main_hero__logo {
