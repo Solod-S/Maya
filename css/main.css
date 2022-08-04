@@ -269,6 +269,7 @@ summary {
   --main-title-color: #4d4d4d;
   --secondary-title-color: #6d6868;
   --secondary-bg-color: #f8eff2;
+  --about-header-color: #484848;
 }
 
 html {
@@ -453,7 +454,7 @@ h4 {
           align-items: center;
 }
 
-.header .header__contact {
+.header__contact {
   padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -471,12 +472,12 @@ h4 {
   color: var(--primary-light-color);
 }
 
-.header .header__contact:hover, .header .header__contact:focus {
+.header__contact:hover, .header__contact:focus {
   color: var(--primary-accent-color);
 }
 
-.header .header__contact:hover .header__svg,
-.header .header__contact:focus .header__svg {
+.header__contact:hover .header__svg,
+.header__contact:focus .header__svg {
   stroke: var(--primary-accent-color);
 }
 
@@ -485,6 +486,15 @@ h4 {
   stroke: var(--primary-light-color);
   -webkit-transition: stroke 250ms linear;
   transition: stroke 250ms linear;
+}
+
+.header__about--modificator {
+  color: var(--about-header-color);
+  stroke: var(--about-header-color);
+}
+
+.header__about--bg {
+  background: rgba(197, 127, 153, 0.5);
 }
 
 .navigation__list {
@@ -513,6 +523,10 @@ h4 {
 
 .navigation__link:hover, .navigation__link:focus {
   color: var(--primary-accent-color);
+}
+
+.navigation__about--modificator {
+  color: var(--about-header-color);
 }
 
 .banner {
@@ -1185,5 +1199,10 @@ h4 {
           align-items: center;
   color: #4d4d4d;
   opacity: 0.8;
+}
+
+.about {
+  padding-top: 254px;
+  padding-bottom: 100px;
 }
 /*# sourceMappingURL=main.css.map */
