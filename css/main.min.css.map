@@ -18,7 +18,8 @@
         "../sass/components/_main_questions.scss",
         "../sass/components/_main_ask_us.scss",
         "../sass/components/_main_subscibe.scss",
-        "../sass/components/_about-company.scss"
+        "../sass/components/_about_company.scss",
+        "../sass/components/_about_social.scss"
     ],
     "names": [],
     "file": "main.min.css"
