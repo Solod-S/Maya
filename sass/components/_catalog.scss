@@ -1,0 +1,44 @@
+.catloog {
+  padding-top: 254px;
+  padding-top: 200px;
+  display: flex;
+  //   &__wrapper {}
+  //   &__general-title {}
+  //   &__category-list {}
+  //   &__category-item {}
+  //   &__price-title {}
+  //   &__price-text {}
+  //   &__input-plus {}
+  //   &__input-minus {}
+  //   &__sizes-list {}
+  //   &__sizes-item {}
+  //   &__sizes-label {}
+  //   &__sizes-checkbox {}
+  //   &__sizes-square {}
+  //   &__sizes-text {}
+}
+
+// .catalog {
+//   &__nav-panel {}
+// }
+.window {
+  display: flex;
+  flex-direction: column;
+  //   &__option {}
+  //   &__option-span {}
+  //   &__search {}
+  //   &__search-icon {}
+  //   &__toggl-btn {}
+  //   &__toggl-icon {}
+}
+.cards {
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  //   &_item {}
+  //   &_img {}
+  //   &_price {}
+  //   &_btn {}
+}
