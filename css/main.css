@@ -1522,13 +1522,133 @@ h4 {
 
 .catloog {
   padding-top: 254px;
-  padding-top: 200px;
+  padding-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.catloog__general-title {
+  margin-bottom: 65px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: calc(49 / 40);
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.catloog__category-list {
+  margin-bottom: 114px;
+}
+
+.catloog__category-item {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.catloog__category-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.catloog__price-form {
+  margin-bottom: 56px;
+}
+
+.catloog__price-title {
+  margin-bottom: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  color: rgba(72, 72, 72, 0.8);
+  opacity: 0.8;
+}
+
+.catloog__price-text {
+  margin-bottom: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  color: rgba(72, 72, 72, 0.8);
+  opacity: 0.8;
+}
+
+.catloog__input-plus {
+  margin-bottom: 26px;
+  max-width: 99px;
+  height: 50px;
+  padding: 15px;
+  background: #e4eef2;
+  border-radius: 8px;
+  border: none;
+}
+
+.catloog__input-minus {
+  margin-bottom: 26px;
+  max-width: 99px;
+  height: 50px;
+  padding: 15px;
+  background: #e4eef2;
+  border-radius: 8px;
+  border: none;
+}
+
+.catloog__sizes-title {
+  margin-bottom: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  color: rgba(72, 72, 72, 0.8);
+  opacity: 0.8;
+}
+
+.catloog__sizes-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.catloog__sizes-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.catloog__sizes-square {
+  margin-right: 22px;
+  display: block;
+  width: 29px;
+  height: 29px;
+  background: #e4eef2;
+  border-radius: 8px;
+}
+
+.catloog__sizes-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  text-transform: uppercase;
+  color: rgba(72, 72, 72, 0.8);
+  opacity: 0.8;
+}
+
 .window {
+  margin-left: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
