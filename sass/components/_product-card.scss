@@ -1,0 +1,208 @@
+.product-card {
+  padding-top: 240px;
+  padding-bottom: 120px;
+  &__article {
+    display: flex;
+  }
+
+  // &__main-img-wrapper {}
+  // &__main-img-link {}
+  &__main-img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  &__list {
+    margin-right: 115px;
+
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  // &__link {}
+  &__img {
+    border-radius: 10px;
+    width: 103px;
+    height: 103px;
+  }
+  // &__wrapper {}
+  &__title {
+    margin-bottom: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: calc(37 / 30);
+
+    color: #4d4d4d;
+  }
+  &__dscr {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    color: #4d4d4d;
+  }
+  &__dscr-text {
+    width: 280px;
+    margin-bottom: 28px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+
+    color: #4d4d4d;
+  }
+  &__compound {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    color: #4d4d4d;
+  }
+  &__compound-text {
+    width: 240px;
+    margin-bottom: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    color: #4d4d4d;
+  }
+
+  &__size-form {
+    margin-bottom: 25px;
+  }
+  &__sizes-title {
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    color: #4d4d4d;
+  }
+  &__sizes-list {
+    display: flex;
+  }
+  &__sizes-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  &__sizes-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__sizes-label input:checked + .product-card__sizes-square {
+    background-image: url(../img/checked.svg);
+
+    background-size: 67%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+  }
+  // &__sizes-checkbox {}
+  &__sizes-square {
+    margin-right: 5px;
+    display: block;
+    width: 29px;
+    height: 29px;
+
+    background: var(--background-btn-color);
+    border-radius: 8px;
+  }
+  &__sizes-text {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+
+    text-transform: uppercase;
+
+    color: rgba(72, 72, 72, 0.8);
+
+    opacity: 0.8;
+  }
+  &__color-form {
+    margin-bottom: 66px;
+  }
+  &__color-title {
+    margin-bottom: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+
+    color: #4d4d4d;
+  }
+  &__color-list {
+    display: flex;
+  }
+  &__color-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  // &__color-label {}
+  // &__color-checkbox {}
+  &__color-label input:checked + .product-card__color-selector {
+    background-image: url(../img/checked.svg);
+
+    background-size: 67%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+  }
+
+  &__color-selector {
+    display: block;
+    width: 29px;
+    height: 29px;
+
+    background: var(--background-btn-color);
+    border-radius: 8px;
+  }
+  &__btn {
+    padding: 25px 57px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+.--pink {
+  background-color: #ffe1e3;
+}
+
+.--yellow {
+  background-color: #fbd05d;
+}
+.--beige {
+  background-color: #e9d1c7;
+}
+.--grey {
+  background-color: #959fa7;
+}
+.--black {
+  background-color: #2f2233;
+}

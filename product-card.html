@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Магазин нижнего белья для беременных" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!-- -------------------------------------------------------------------------HEADER-------------------------------------------------------------------------- */ -->
+    <header class="header container">
+      <a href="./index.html">
+        <h2 class="header__title header__about--modificator header__about--bg">
+          Познакомьтесь с акциями этого месяца от MAYA
+        </h2>
+      </a>
+      <div class="header__wrapper container">
+        <a class="logo" href="./index.html"
+          ><img
+            class="logo__img"
+            src="./img/maya_logo-gray.svg"
+            alt="логотип"
+            width="160"
+        /></a>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__about--modificator"
+                href="./index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__about--modificator"
+                href="./about.html"
+                >О нас</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__about--modificator --current-page"
+                href="./catalog.html"
+                >Каталог</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                class="navigation__link navigation__about--modificator"
+                href="./delivery.html"
+                >Доставка</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="tel:+388002334455"
+          class="header__contact header__about--modificator"
+        >
+          <svg
+            class="header__svg header__about--modificator"
+            width="40"
+            height="40"
+          >
+            <use href="./img/symbol-defs.svg#icon-tell"></use>
+          </svg>
+          8 (800) 233-44-55</a
+        >
+      </div>
+    </header>
+    <main>
+      <!--  -------------------------------------------------------------------------ProductCard-------------------------------------------------------------------------- */ -->
+      <section class="container product-card">
+        <article class="product-card__article">
+          <div class="product-card__main-img-wrapper">
+            <a href="#" class="product-card__main-img-link">
+              <img
+                class="product-card__main-img"
+                src="./img/product-card-img-1.jpg"
+                alt="фотография товара"
+                width="470"
+              />
+            </a>
+            <ul class="product-card__list">
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="./img/product-card-img-1.jpg"
+                    alt="фотография товара"
+                    width="103"
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="./img/product-card-img-2.jpg"
+                    alt="фотография товара"
+                    width="103"
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="./img/product-card-img-3.jpg"
+                    alt="фотография товара"
+                    width="103"
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="./img/product-card-img-4.jpg"
+                    alt="фотография товара"
+                    width="103"
+                /></a>
+              </li>
+              <!-- <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="./img/product-card-img-5.jpg"
+                    alt="фотография товара"
+                    width="103"
+                /></a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="product-card__wrapper">
+            <h1 class="product-card__title">Заголовок Товара</h1>
+            <p class="product-card__dscr">
+              <b>Описание товара:</b>
+            </p>
+            <p class="product-card__dscr-text">
+              Пару красивых предложений несколько преимуществ
+            </p>
+            <p class="product-card__compound">
+              <b>Состав:</b>
+            </p>
+            <p class="product-card__compound-text">105% хлопок, 10 % эластан</p>
+            <form class="product-card__size-form">
+              <h2 class="product-card__sizes-title"><b>Размер:</b></h2>
+              <ul class="product-card__sizes-list">
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">xs</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">s</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">m</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">l</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">xl</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">xxl</span>
+                  </label>
+                </li>
+                <li class="product-card__sizes-item">
+                  <label class="product-card__sizes-label">
+                    <input
+                      class="product-card__sizes-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__sizes-square"></span>
+                    <span class="product-card__sizes-text">xxxl</span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+            <form class="product-card__color-form">
+              <h2 class="product-card__color-title"><b>Цвет:</b></h2>
+              <ul class="product-card__color-list">
+                <li class="product-card__color-item">
+                  <label class="product-card__color-label">
+                    <input
+                      class="product-card__color-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__color-selector --pink"></span>
+                  </label>
+                </li>
+                <li class="product-card__color-item">
+                  <label class="product-card__color-label">
+                    <input
+                      class="product-card__color-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__color-selector --yellow"></span>
+                  </label>
+                </li>
+                <li class="product-card__color-item">
+                  <label class="product-card__color-label">
+                    <input
+                      class="product-card__color-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__color-selector --beige"></span>
+                  </label>
+                </li>
+                <li class="product-card__color-item">
+                  <label class="product-card__color-label">
+                    <input
+                      class="product-card__color-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__color-selector --grey"></span>
+                  </label>
+                </li>
+                <li class="product-card__color-item">
+                  <label class="product-card__color-label">
+                    <input
+                      class="product-card__color-checkbox visually__hidden"
+                      type="checkbox"
+                    />
+                    <span class="product-card__color-selector --black"></span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+            <button class="product-card__btn">Заказать</button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!---------------------------------------------------------------------------MAIN-SUBSCRIBE------------------------------------------------------------------------- */ -->
+    <footer class="main-subscribe container">
+      <div class="main-subscribe__wrapper">
+        <h2 class="main-subscribe__title">Следите за нашими новинками</h2>
+        <ul class="main-subscribe__list">
+          <li class="main-subscribe__item">
+            <a class="main-subscribe__link" href="#">Каталог</a>
+          </li>
+          <li class="main-subscribe__item">
+            <a class="main-subscribe__link" href="#">Доставка</a>
+          </li>
+          <li class="main-subscribe__item">
+            <a class="main-subscribe__link" href="#">Оплата</a>
+          </li>
+        </ul>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__svg" width="57" height="57">
+                <use href="./img/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__svg" width="58" height="57">
+                <use href="./img/symbol-defs.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg class="social__svg" width="58" height="57">
+                <use href="./img/symbol-defs.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="main-subscribe__text">
+          Оставьте адрес своей электронной почты
+        </p>
+        <form class="subscribe-form">
+          <input
+            class="subscribe-form__input"
+            type="email"
+            placeholder="Name@gmail.com"
+          />
+          <button class="subscribe-form__btn" type="submit">
+            Получать новости на email
+          </button>
+        </form>
+      </div>
+
+      <div class="copyright">
+        <p class="copyright__text">Maya store &#169; 2022 Все права защищены</p>
+        <span class="copyright__number">8(800)-888-44-55</span>
+      </div>
+    </footer>
+  </body>
+</html>

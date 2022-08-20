@@ -270,6 +270,7 @@ summary {
   --secondary-title-color: #6d6868;
   --secondary-bg-color: #f8eff2;
   --about-header-color: #484848;
+  --background-btn-color: #e4eef2;
 }
 
 html {
@@ -1543,6 +1544,10 @@ h4 {
   display: flex;
 }
 
+.catloog__wrapper {
+  padding-top: 20px;
+}
+
 .catloog__general-title {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -1621,7 +1626,7 @@ h4 {
   max-width: 55px;
   height: 40px;
   padding: 15px;
-  background: #e4eef2;
+  background: var(--background-btn-color);
   border-radius: 8px;
   border: none;
   font-family: "Montserrat", sans-serif;
@@ -1638,7 +1643,7 @@ h4 {
   max-width: 55px;
   height: 40px;
   padding: 15px;
-  background: #e4eef2;
+  background: var(--background-btn-color);
   border-radius: 8px;
   border: none;
   font-family: "Montserrat", sans-serif;
@@ -1693,7 +1698,7 @@ h4 {
   display: block;
   width: 29px;
   height: 29px;
-  background: #e4eef2;
+  background: var(--background-btn-color);
   border-radius: 8px;
 }
 
@@ -1741,7 +1746,7 @@ h4 {
   padding-right: 15px;
   padding-top: 12px;
   padding-bottom: 16px;
-  background: #e4eef2;
+  background: var(--background-btn-color);
   border-radius: 10px;
   border: none;
   font-family: "Montserrat", sans-serif;
@@ -1827,7 +1832,7 @@ h4 {
   padding-right: 47px;
   padding-top: 15px;
   padding-bottom: 15px;
-  background: #e4eef2;
+  background: var(--background-btn-color);
   border-radius: 10px;
   border: none;
   font-family: "Montserrat", sans-serif;
@@ -1863,7 +1868,7 @@ h4 {
   line-height: calc(15 / 12);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-light-color);
 }
 
 .cards_list {
@@ -1907,7 +1912,7 @@ h4 {
   font-size: 17px;
   line-height: calc(24 / 20);
   text-align: center;
-  color: #4d4d4d;
+  color: var(--main-title-color);
 }
 
 .cards_price {
@@ -1918,7 +1923,7 @@ h4 {
   font-size: 17px;
   line-height: calc(24 / 20);
   text-align: center;
-  color: #4d4d4d;
+  color: var(--main-title-color);
 }
 
 .cards_btn {
@@ -1933,10 +1938,227 @@ h4 {
   line-height: calc(15 / 12);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-light-color);
 }
 
 .--current-page {
   color: var(--primary-accent-color);
+}
+
+.product-card {
+  padding-top: 240px;
+  padding-bottom: 120px;
+}
+
+.product-card__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card__main-img {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.product-card__list {
+  margin-right: 115px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.product-card__img {
+  border-radius: 10px;
+  width: 103px;
+  height: 103px;
+}
+
+.product-card__title {
+  margin-bottom: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: calc(37 / 30);
+  color: #4d4d4d;
+}
+
+.product-card__dscr {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__dscr-text {
+  width: 280px;
+  margin-bottom: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__compound {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__compound-text {
+  width: 240px;
+  margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__size-form {
+  margin-bottom: 25px;
+}
+
+.product-card__sizes-title {
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__sizes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card__sizes-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.product-card__sizes-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.product-card__sizes-label input:checked + .product-card__sizes-square {
+  background-image: url(../img/checked.svg);
+  background-size: 67%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.product-card__sizes-square {
+  margin-right: 5px;
+  display: block;
+  width: 29px;
+  height: 29px;
+  background: var(--background-btn-color);
+  border-radius: 8px;
+}
+
+.product-card__sizes-text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  text-transform: uppercase;
+  color: rgba(72, 72, 72, 0.8);
+  opacity: 0.8;
+}
+
+.product-card__color-form {
+  margin-bottom: 66px;
+}
+
+.product-card__color-title {
+  margin-bottom: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  color: #4d4d4d;
+}
+
+.product-card__color-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-card__color-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.product-card__color-label input:checked + .product-card__color-selector {
+  background-image: url(../img/checked.svg);
+  background-size: 67%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.product-card__color-selector {
+  display: block;
+  width: 29px;
+  height: 29px;
+  background: var(--background-btn-color);
+  border-radius: 8px;
+}
+
+.product-card__btn {
+  padding: 25px 57px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.--pink {
+  background-color: #ffe1e3;
+}
+
+.--yellow {
+  background-color: #fbd05d;
+}
+
+.--beige {
+  background-color: #e9d1c7;
+}
+
+.--grey {
+  background-color: #959fa7;
+}
+
+.--black {
+  background-color: #2f2233;
 }
 /*# sourceMappingURL=main.css.map */
