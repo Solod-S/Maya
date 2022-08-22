@@ -1959,6 +1959,7 @@ h4 {
 .product-card__main-img {
   margin-bottom: 20px;
   border-radius: 10px;
+  height: 470px;
 }
 
 .product-card__list {
