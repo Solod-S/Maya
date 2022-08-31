@@ -1,28 +1,136 @@
-<li class="cards_item">
-  <img
-    class="cards_img"
-    src="./img/panties_black_1.jpg"
-    alt="товар"
-    width="244"
-  />
-  <h3 data-type="panties" class="cards_title">
-    Трусики-бандаж - MumsCare Black
-  </h3>
-  <p data-price="400" class="cards_price">
-    400грн
-  </p>
-  <button class="cards_btn">подробнее</button>
-</li>;
-
 export default [
   {
-    name: "Трусики-бандаж - MumsCare Black",
-    description:
-      "Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании или частном лице.",
-    category: "Веб-сайт",
-    type: ["panties", "all"],
+    name: "Бесшовный Бюстгальтер - Skincare Grey",
+    category: ["bra", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "500",
+    mainImg: "./img/bra_skincare_grey_1.jpg",
+  },
+  {
+    name: "Бесшовный Бюстгальтер - Skincare Black",
+    category: ["bra", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "500",
+    mainImg: "./img/bra_skincare_black_1.jpg",
+  },
+  {
+    name: "Бесшовный Бюстгальтер - Skincare Nude",
+    category: ["bra", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "500",
+    mainImg: "./img/bra_skincare_nude_1.jpg",
+  },
+  {
+    name: "Бесшовный Бюстгальтер - Skincare Pink",
+    category: ["", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "500",
+    mainImg: "./img/bra_skincare_pink_1.jpg",
+  },
+  {
+    name: "Дородовый Бандаж - Anita White",
+    category: ["bandage", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "600",
+    mainImg: "./img/bandage_anita_babybelt_white_1.jpg",
+  },
+  {
+    name: "Дородовый Бандаж - Anita Nude",
+    category: ["bandage", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "600",
+    mainImg: "./img/bandage_anita_babybelt_nude_1.jpg",
+  },
+  {
+    name: "Дородовый Бандаж - Anita Black",
+    category: ["bandage", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "600",
+    mainImg: "./img/bandage_anita_babybelt_black_1.jpg",
+  },
+  {
+    name: "Комплект - Anais Grey",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_anais_2.jpg",
+  },
+  {
+    name: "Комплект - Anais Pink",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_perla_3.jpg",
+  },
+  {
+    name: "Комплект - Anais Milki",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_milki_2.jpg",
+  },
+  {
+    name: "Комплект - Anais Pink",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_perla_3.jpg",
+  },
+  {
+    name: "Комплект - Anais Milki",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_milki_2.jpg",
+  },
+  {
+    name: "Комплект - Anais Provance",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_provance_8.jpg",
+  },
+  {
+    name: "Комплект - Anais Tiffany",
+    category: ["kit", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "1000",
+    mainImg: "./img/kit_tiffany_6.jpg",
+  },
+  {
+    name: "Трусики-бандаж - MumsCare Pink",
+    category: ["panties", "all"],
     sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     price: "400",
-    generalImg: "./img/panties_black_1.jpg",
+    mainImg: "./img/panties_pink_1.jpg",
+  },
+  {
+    name: "Трусики-бандаж - MumsCare Grey",
+    category: ["panties", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "400",
+    mainImg: "./img/panties_grey_1.jpg",
+  },
+  {
+    name: "Трусики-бандаж - MumsCare Nude",
+    category: ["panties", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "400",
+    mainImg: "./img/panties_nude_1.jpg",
+  },
+  {
+    name: "Трусики-бандаж - MumsCare Black",
+    category: ["panties", "all"],
+    sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+    price: "400",
+    mainImg: "./img/panties_black_1.jpg",
   },
 ];
+
+// {
+//   name: "",
+//   category: ["", "all"],
+//   sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
+//   price: "",
+//   mainImg: "",
+// },
