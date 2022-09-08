@@ -104,43 +104,45 @@
               <!-- <h1 class="catloog__general-title">Каталог</h1> -->
               <ul class="catloog__category-list">
                 <li class="catloog__category-item">
-                  <label
-                    data-category="bandage"
-                    class="catloog__category-label"
-                  >
+                  <label class="catloog__category-label">
                     <input
                       class="catloog__category-checkbox visually__hidden"
                       type="checkbox"
+                      data-category="bandage"
+                      data-status="off"
                     />
                     <span class="catloog__category-text">Бандажи</span>
                   </label>
                 </li>
                 <li class="catloog__category-item">
-                  <label data-category="bra" class="catloog__category-label">
+                  <label class="catloog__category-label">
                     <input
                       class="catloog__category-checkbox visually__hidden"
                       type="checkbox"
+                      data-category="bra"
+                      data-status="off"
                     />
                     <span class="catloog__category-text">Бюстгалтеры</span>
                   </label>
                 </li>
                 <li class="catloog__category-item">
-                  <label
-                    data-category="panties"
-                    class="catloog__category-label"
-                  >
+                  <label class="catloog__category-label">
                     <input
                       class="catloog__category-checkbox visually__hidden"
                       type="checkbox"
+                      data-category="panties"
+                      data-status="off"
                     />
                     <span class="catloog__category-text">Трусики</span>
                   </label>
                 </li>
                 <li class="catloog__category-item">
-                  <label data-category="kit" class="catloog__category-label">
+                  <label class="catloog__category-label">
                     <input
                       class="catloog__category-checkbox visually__hidden"
                       type="checkbox"
+                      data-category="kit"
+                      data-status="off"
                     />
                     <span class="catloog__category-text">Комплеткы</span>
                   </label>
@@ -164,6 +166,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="xs"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">xs</span>
@@ -174,6 +178,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="s"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">s</span>
@@ -184,6 +190,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="m"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">m</span>
@@ -194,6 +202,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="l"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">l</span>
@@ -204,6 +214,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="xl"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">xl</span>
@@ -214,6 +226,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="xxl"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">xxl</span>
@@ -224,6 +238,8 @@
                     <input
                       class="catloog__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-size="xxxl"
+                      data-status="off"
                     />
                     <span class="catloog__sizes-square"></span>
                     <span class="catloog__sizes-text">xxxl</span>
@@ -541,6 +557,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./js/catalog.js"></script>
+    <script src="./js/catalog.js" type="module"></script>
   </body>
 </html>

@@ -8,7 +8,8 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 1000,
-
+    pauseOnHover: false,
+    pauseOnFocus: false,
     // responsive: [
     //   {
     //     breakpoint: 1200,
