@@ -153,9 +153,9 @@
               <h2 class="catloog__price-title">Цена</h2>
               <div class="catloog__price-wrapper">
                 <p class="catloog__price-text">от</p>
-                <input type="text" class="catloog__input-plus" />
+                <input type="text" class="catloog__input-plus" name="from" />
                 <p class="catloog__price-text">до</p>
-                <input type="text" class="catloog__input-minus" />
+                <input type="text" class="catloog__input-minus" name="to" />
               </div>
             </form>
             <form class="catloog__wrapper">
@@ -273,11 +273,11 @@
                   width="244"
                 />
                 <h3 data-category="bra" class="cards_title">
-                  Бесшовный Бюстгальтер - Skincare Grey
+                  Бюстгальтер - Skincare Grey
                 </h3>
                 <p data-price="500" class="cards_price">500грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xs, s, m</p>
+                <p class="cards_size">xs / s / m /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -287,11 +287,11 @@
                   width="244"
                 />
                 <h3 data-category="bra" class="cards_title">
-                  Бесшовный Бюстгальтер - Skincare Black
+                  Бюстгальтер - Skincare Black
                 </h3>
                 <p data-price="500" class="cards_price">500грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xxl, xxxl</p>
+                <p class="cards_size">xxl / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -301,11 +301,11 @@
                   width="244"
                 />
                 <h3 data-category="bra" class="cards_title">
-                  Бесшовный Бюстгальтер - Skincare Nude
+                  Бюстгальтер - Skincare Nude
                 </h3>
                 <p data-price="500" class="cards_price">500грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">l, xl</p>
+                <p class="cards_size">l / xl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -315,11 +315,11 @@
                   width="244"
                 />
                 <h3 data-category="bra" class="cards_title">
-                  Бесшовный Бюстгальтер - Skincare Pink
+                  Бюстгальтер - Skincare Pink
                 </h3>
                 <p data-price="500" class="cards_price">500грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">s, xxxl</p>
+                <p class="cards_size">s / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -333,7 +333,7 @@
                 </h3>
                 <p data-price="600" class="cards_price">600грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">m, l, xxxl</p>
+                <p class="cards_size">m / l / xxxl</p>
               </li>
               <li class="cards_item">
                 <img
@@ -347,7 +347,7 @@
                 </h3>
                 <p data-price="600" class="cards_price">600грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xs, l, xl</p>
+                <p class="cards_size">xs / l / xl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -361,7 +361,7 @@
                 </h3>
                 <p data-price="600" class="cards_price">600грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">s, xl, xxxl</p>
+                <p class="cards_size">s / xl / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -375,7 +375,7 @@
                 </h3>
                 <p data-price="1000" class="cards_price">1000грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xl, xxl, xxxl</p>
+                <p class="cards_size">xl / xxl / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -389,7 +389,7 @@
                 </h3>
                 <p data-price="1000" class="cards_price">1000грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">m, l, xl</p>
+                <p class="cards_size">m / l / xl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -403,7 +403,7 @@
                 </h3>
                 <p data-price="1000" class="cards_price">1000грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xs, m</p>
+                <p class="cards_size">xs / m /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -417,7 +417,7 @@
                 </h3>
                 <p data-price="1000" class="cards_price">1000грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">l, xl</p>
+                <p class="cards_size">l / xl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -431,7 +431,7 @@
                 </h3>
                 <p data-price="1000" class="cards_price">1000грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">s, m, xxxl</p>
+                <p class="cards_size">s / m / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -445,7 +445,7 @@
                 </h3>
                 <p data-price="400" class="cards_price">400грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">l, xl, xxl, xxxl</p>
+                <p class="cards_size">l / xl / xxl / xxxl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -459,7 +459,7 @@
                 </h3>
                 <p data-price="400" class="cards_price">400грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">xs, s, m</p>
+                <p class="cards_size">xs / s / m /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -473,7 +473,7 @@
                 </h3>
                 <p data-price="400" class="cards_price">400грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">m, l, xl</p>
+                <p class="cards_size">m / l / xl /</p>
               </li>
               <li class="cards_item">
                 <img
@@ -487,7 +487,7 @@
                 </h3>
                 <p data-price="400" class="cards_price">400грн</p>
                 <button class="cards_btn">подробнее</button>
-                <p class="cards_size">m, l, xxxl</p>
+                <p class="cards_size">m / l / xxxl /</p>
               </li>
             </ul>
             <button class="window__btn" type="button">
@@ -565,7 +565,8 @@
           </h3>
           <p data-price={{price}} class="cards_price">{{price}}грн</p>
           <button class="cards_btn">подробнее</button>
-          <p class="cards_size">{{sizes}}</p>
+          <!-- <p class="cards_size">{{sizes}}</p> -->
+          <p class="cards_size">{{#each sizes}} {{this}} / {{/each}}</p>
         </li>{{/each}}
     </script>
     <script
@@ -574,6 +575,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="./js/catalog.js" type="module"></script>
   </body>
 </html>
