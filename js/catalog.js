@@ -86,28 +86,18 @@ const filters = {
     if (!categoryActive) {
       filters.readyToMarkUp = products;
     }
-    // if (income.length === 0) {
-    //   filters.createMarkUp(products);
-    //   console.log(`createMarkUp`);
-    // } else {
-    //   // const filteredByCategory = products.filter((product) => {
-    //   //   return income.includes(product.category);
-    //   //   // return product.category.includes(...income);
-    //   filters.readyToMarkUp = products.filter((product) => {
-    //     for (let size of product.sizes) {
-    //       if (income.includes(product.category) && income.includes(size)) {
-    //         return true;
-    //       } else if (income.includes(size)) {
-    //         return true;
-    //       } else if (income.includes(product.category)) {
-    //         return true;
-    //       }
-    //     }
-    //     return income.includes(product.sizes);
-    //   });
-    //   console.log(forFilter);
-    //   return filters.createMarkUp(filters.readyToMarkUp);
-    // }
+    if (sizesActive) {
+      filters.readyToMarkUp = filters.readyToMarkUp.filter((product) => {
+        for (let size of product.sizes) {
+          for (let [name, value] of Object.entries(forFilter.sizes)) {
+            if (size === name && value === "on") {
+              return true;
+            }
+          }
+        }
+      });
+    }
+
     return filters.createMarkUp(filters.readyToMarkUp);
   },
 
