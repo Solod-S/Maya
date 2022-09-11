@@ -1930,6 +1930,7 @@ h4 {
 .cards_btn {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 12px;
   display: block;
   padding: 13px 26px;
   font-family: "Montserrat", sans-serif;
@@ -1940,6 +1941,18 @@ h4 {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-light-color);
+}
+
+.cards_size {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 11px;
+  line-height: calc(24 / 20);
+  text-align: center;
+  color: var(--main-title-color);
 }
 
 .--current-page {

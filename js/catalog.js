@@ -6,40 +6,56 @@ const forFilter = {
   category: {},
   sizes: {},
 };
-const forMarkUp = [];
+
+const itemsList = [];
 const filters = {
   category: document.querySelector(".catloog__category-list"),
   categoryCheckboxes: document.querySelectorAll(".catloog__category-checkbox"),
   sizes: document.querySelector(".catloog__sizes-list"),
   sizesCheckboxes: document.querySelectorAll(".catloog__sizes-checkbox"),
   catalog: document.querySelector(".cards_list"),
-  strat() {
+  createItemsList() {
     const entriesCategory = Object.entries(forFilter.category);
     // forFilter.category {bandage: 'on'} => [['bandage', 'on']]
     entriesCategory.forEach(([key, value]) => {
-      if (value === "off" && forMarkUp.includes(key)) {
-        const indexForRemove = forMarkUp.indexOf(key);
-        forMarkUp.splice(indexForRemove, 1);
-        // console.log(forMarkUp);
-      } else if (value === "on" && !forMarkUp.includes(key)) {
-        forMarkUp.push(key);
+      if (value === "off" && itemsList.includes(key)) {
+        const indexForRemove = itemsList.indexOf(key);
+        itemsList.splice(indexForRemove, 1);
+        console.log(`!`);
+      } else if (value === "on" && !itemsList.includes(key)) {
+        itemsList.push(key);
       }
     });
-    console.log(forMarkUp);
-  },
-  filter() {
-    // const filtered = products.filter((product) =>
-    //   product.category.includes("bra")
-    // );
-    // filters.createMarkUp(filtered);
-    // console.log(filtered);
+    filters.filterCatgory(itemsList);
 
-    const filteredByCategory = products.filter((product) =>
-      product.category.includes("bandage")
-    );
-    filters.createMarkUp(filteredByCategory);
-    // console.log(filteredByCategory);
+    console.log(itemsList);
   },
+  filterCatgory(income) {
+    if (income.length === 0) {
+      filters.createMarkUp(products);
+    } else {
+      const filteredByCategory = products.filter((product) => {
+        return income.includes(product.category);
+        // return product.category.includes(...income);
+      });
+      console.log(`я запустилась`);
+
+      return filters.createMarkUp(filteredByCategory);
+    }
+  },
+  // filterCatgory(income) {
+  //   if (income.length === 0) {
+  //     filters.createMarkUp(products);
+  //   } else {
+  //     const filteredByCategory = products.filter((product) => {
+  //       return income.includes(product.category);
+  //       // return product.category.includes(...income);
+  //     });
+  //     console.log(`я запустилась`);
+
+  //     return filters.createMarkUp(filteredByCategory);
+  //   }
+  // },
   createMarkUp(filtered) {
     // const filteredArrays = products.filter((product) =>
     //   product.filter.includes(selectedFilter)
@@ -50,7 +66,7 @@ const filters = {
     filters.catalog.innerHTML = "";
     filters.catalog.insertAdjacentHTML("beforeend", cardsEl);
   },
-  onCategoryChange(event) {
+  changeStatusCatCheckboxes(event) {
     if (event.target.checked) {
       // console.log("Checkbox is checked..");
       event.target.dataset.status = "on";
@@ -68,9 +84,9 @@ const filters = {
       // );
     });
     // console.log(forFilter);
-    filters.strat();
+    filters.createItemsList();
   },
-  onSizesChange(event) {
+  changeStatusSizesCheckboxes(event) {
     if (event.target.checked) {
       // console.log("Checkbox is checked..");
       event.target.dataset.status = "on";
@@ -87,12 +103,12 @@ const filters = {
       //   name.dataset.status
       // );
     });
-    console.log(forFilter);
-    filters.strat;
+    console.log(forFilter.sizes);
+    filters.createItemsList;
   },
 };
 
-filters.category.addEventListener("change", filters.onCategoryChange);
-filters.sizes.addEventListener("change", filters.onSizesChange);
-filters.filter();
+filters.category.addEventListener("change", filters.changeStatusCatCheckboxes);
+filters.sizes.addEventListener("change", filters.changeStatusSizesCheckboxes);
+// filters.filter();
 // console.log(products.filter((i) => i.name === "bra"));
