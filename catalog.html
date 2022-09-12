@@ -92,10 +92,18 @@
             </svg>
           </span>
           <span class="window__option-span">
-            <button class="window__toggl-btn">Сортировать по цене</button>
-            <svg class="window__toggl-icon" width="14px" height="14px">
-              <use href="./img/symbol-defs.svg#icon-toggl"></use>
-            </svg>
+            <label class="window__toggl-label">
+              <input
+                class="window__price-checkbox visually__hidden"
+                type="checkbox"
+                data-status=""
+              />
+              <span class="window__toggl-btn">Сортировать по цене</span>
+              <svg class="window__toggl-icon" width="14px" height="14px">
+                <use href="./img/symbol-defs.svg#icon-toggl"></use>
+              </svg>
+            </label>
+            <!-- <button class="window__toggl-btn">Сортировать по цене</button> -->
           </span>
         </div>
         <div class="catloog__general-wrapper">
@@ -275,7 +283,7 @@
                 <h3 data-category="bra" class="cards_title">
                   Бюстгальтер - Skincare Grey
                 </h3>
-                <p data-price="500" class="cards_price">500грн</p>
+                <p data-price="300" class="cards_price">300грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">xs / s / m /</p>
               </li>
@@ -289,7 +297,7 @@
                 <h3 data-category="bra" class="cards_title">
                   Бюстгальтер - Skincare Black
                 </h3>
-                <p data-price="500" class="cards_price">500грн</p>
+                <p data-price="400" class="cards_price">400грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">xxl / xxxl /</p>
               </li>
@@ -303,7 +311,7 @@
                 <h3 data-category="bra" class="cards_title">
                   Бюстгальтер - Skincare Nude
                 </h3>
-                <p data-price="500" class="cards_price">500грн</p>
+                <p data-price="450" class="cards_price">450грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">l / xl /</p>
               </li>
@@ -331,7 +339,7 @@
                 <h3 data-category="bandage" class="cards_title">
                   Дородовый Бандаж - Anita White
                 </h3>
-                <p data-price="600" class="cards_price">600грн</p>
+                <p data-price="550" class="cards_price">550грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">m / l / xxxl</p>
               </li>
@@ -359,7 +367,7 @@
                 <h3 data-category="bandage" class="cards_title">
                   Дородовый Бандаж - Anita Black
                 </h3>
-                <p data-price="600" class="cards_price">600грн</p>
+                <p data-price="650" class="cards_price">650грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">s / xl / xxxl /</p>
               </li>
@@ -373,7 +381,7 @@
                 <h3 data-category="kit" class="cards_title">
                   Комплект - Anais Grey
                 </h3>
-                <p data-price="1000" class="cards_price">1000грн</p>
+                <p data-price="900" class="cards_price">900грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">xl / xxl / xxxl /</p>
               </li>
@@ -387,7 +395,7 @@
                 <h3 data-category="kit" class="cards_title">
                   Комплект - Anais Pink
                 </h3>
-                <p data-price="1000" class="cards_price">1000грн</p>
+                <p data-price="950" class="cards_price">950грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">m / l / xl /</p>
               </li>
@@ -415,7 +423,7 @@
                 <h3 data-category="kit" class="cards_title">
                   Комплект - Anais Provance
                 </h3>
-                <p data-price="1000" class="cards_price">1000грн</p>
+                <p data-price="1100" class="cards_price">1100грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">l / xl /</p>
               </li>
@@ -429,7 +437,7 @@
                 <h3 data-category="kit" class="cards_title">
                   Комплект - Anais Tiffany
                 </h3>
-                <p data-price="1000" class="cards_price">1000грн</p>
+                <p data-price="1200" class="cards_price">1200грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">s / m / xxxl /</p>
               </li>
@@ -443,7 +451,7 @@
                 <h3 data-category="panties" class="cards_title">
                   Трусики-бандаж - MumsCare Pink
                 </h3>
-                <p data-price="400" class="cards_price">400грн</p>
+                <p data-price="250" class="cards_price">250грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">l / xl / xxl / xxxl /</p>
               </li>
@@ -457,7 +465,7 @@
                 <h3 data-category="panties" class="cards_title">
                   Трусики-бандаж - MumsCare Grey
                 </h3>
-                <p data-price="400" class="cards_price">400грн</p>
+                <p data-price="300" class="cards_price">300грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">xs / s / m /</p>
               </li>
@@ -471,7 +479,7 @@
                 <h3 data-category="panties" class="cards_title">
                   Трусики-бандаж - MumsCare Nude
                 </h3>
-                <p data-price="400" class="cards_price">400грн</p>
+                <p data-price="350" class="cards_price">350грн</p>
                 <button class="cards_btn">подробнее</button>
                 <p class="cards_size">m / l / xl /</p>
               </li>

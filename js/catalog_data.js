@@ -4,7 +4,7 @@ export default [
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xs", "s", "m"],
-    price: "500",
+    price: 300,
     mainImg: "./img/bra_skincare_grey_1.jpg",
   },
   {
@@ -12,7 +12,7 @@ export default [
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xxl", "xxxl"],
-    price: "500",
+    price: 400,
     mainImg: "./img/bra_skincare_black_1.jpg",
   },
   {
@@ -20,7 +20,7 @@ export default [
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["l", "xl"],
-    price: "500",
+    price: 450,
     mainImg: "./img/bra_skincare_nude_1.jpg",
   },
   {
@@ -28,7 +28,7 @@ export default [
     category: "bra",
 
     sizes: ["s", "xxxl"],
-    price: "500",
+    price: 500,
     mainImg: "./img/bra_skincare_pink_1.jpg",
   },
   {
@@ -36,7 +36,7 @@ export default [
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["m", "l", "xxxl"],
-    price: "600",
+    price: 550,
     mainImg: "./img/bandage_anita_babybelt_white_1.jpg",
   },
   {
@@ -44,7 +44,7 @@ export default [
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xs", "l", "xl"],
-    price: "600",
+    price: 600,
     mainImg: "./img/bandage_anita_babybelt_nude_1.jpg",
   },
   {
@@ -52,7 +52,7 @@ export default [
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["s", "xl", "xxxl"],
-    price: "600",
+    price: 650,
     mainImg: "./img/bandage_anita_babybelt_black_1.jpg",
   },
   {
@@ -60,7 +60,7 @@ export default [
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xl", "xxl", "xxxl"],
-    price: "1000",
+    price: 900,
     mainImg: "./img/kit_anais_2.jpg",
   },
   {
@@ -68,7 +68,7 @@ export default [
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["m", "l", "xl"],
-    price: "1000",
+    price: 950,
     mainImg: "./img/kit_perla_3.jpg",
   },
   {
@@ -76,7 +76,7 @@ export default [
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xs", "m"],
-    price: "1000",
+    price: 1000,
     mainImg: "./img/kit_milki_2.jpg",
   },
   {
@@ -84,7 +84,7 @@ export default [
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["l", "xl"],
-    price: "1000",
+    price: 1100,
     mainImg: "./img/kit_provance_8.jpg",
   },
   {
@@ -92,7 +92,7 @@ export default [
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["s", "m", "xxxl"],
-    price: "1000",
+    price: 1200,
     mainImg: "./img/kit_tiffany_6.jpg",
   },
   {
@@ -100,7 +100,7 @@ export default [
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["l", "xl", "xxl", "xxxl"],
-    price: "400",
+    price: 250,
     mainImg: "./img/panties_pink_1.jpg",
   },
   {
@@ -108,7 +108,7 @@ export default [
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["xs", "s", "m"],
-    price: "400",
+    price: 300,
     mainImg: "./img/panties_grey_1.jpg",
   },
   {
@@ -116,7 +116,7 @@ export default [
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["m", "l", "xl"],
-    price: "400",
+    price: 350,
     mainImg: "./img/panties_nude_1.jpg",
   },
   {
@@ -124,7 +124,7 @@ export default [
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
     sizes: ["m", "l", "xxxl"],
-    price: "400",
+    price: 400,
     mainImg: "./img/panties_black_1.jpg",
   },
 ];

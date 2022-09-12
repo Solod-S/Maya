@@ -1827,6 +1827,15 @@ h4 {
   position: relative;
 }
 
+.window__toggl-label {
+  cursor: pointer;
+}
+
+.window__toggl-label:hover .window__toggl-btn {
+  color: var(--primary-light-color);
+  background-color: var(--primary-accent-color);
+}
+
 .window__toggl-btn {
   padding-left: 35px;
   padding-right: 47px;
@@ -1847,6 +1856,8 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(72, 72, 72, 0.8);
+  -webkit-transition: color 250ms linear, background-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear;
   opacity: 0.8;
 }
 

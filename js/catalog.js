@@ -5,7 +5,7 @@ const template = Handlebars.compile(source);
 const forFilter = {
   category: {},
   sizes: {},
-  price: {},
+  price: { from: 1, to: 9999 },
 };
 
 const itemsList = [];
@@ -18,10 +18,31 @@ const filters = {
   sizesCheckboxes: document.querySelectorAll(".catloog__sizes-checkbox"),
   catalog: document.querySelector(".cards_list"),
   priceForm: document.querySelector(".catloog__price-form"),
+  priceSwitcher: document.querySelector(`.window__price-checkbox`),
+  onpriceSwitcher() {
+    // filters.readyToMarkUp = filters.readyToMarkUp.sort((a, b) => a - b);
+    // _.sortBy(filters.readyToMarkUp, filters.readyToMarkUp.price);
+    filters.readyToMarkUp = _.sortBy(
+      filters.readyToMarkUp,
+      (product) => product.price
+    );
+    // filters.readyToMarkUp = _.sortBy(
+    //   filters.readyToMarkUp,
+    //   (product) => product.price
+    // ).reverse();
+    console.log(filters.readyToMarkUp);
+    filters.filter();
+  },
   onPriceFormInput(event) {
-    forFilter.price[event.target.name] = event.target.value;
+    forFilter.price[event.target.name] = Number(event.target.value);
+    if (forFilter.price.to === 0) {
+      forFilter.price.to = 9999;
+    }
+    if (forFilter.price.from === 0) {
+      forFilter.price.from = 1;
+    }
     console.log(forFilter.price);
-    // filters.filter(forFilter);
+    filters.filter();
   },
   onSearchInput(event) {
     const onSearchInput = event.target.value.toLowerCase();
@@ -57,9 +78,9 @@ const filters = {
       }
     });
 
-    filters.filter(itemsList);
+    filters.filter();
   },
-  filter(income) {
+  filter() {
     const categoryActive = Object.values(forFilter.category).includes("on");
     const sizesActive = Object.values(forFilter.sizes).includes("on");
     if (categoryActive) {
@@ -98,6 +119,14 @@ const filters = {
       });
     }
 
+    filters.readyToMarkUp = filters.readyToMarkUp.filter((product) => {
+      if (
+        product.price >= forFilter.price.from &&
+        product.price <= forFilter.price.to
+      ) {
+        return true;
+      }
+    });
     return filters.createMarkUp(filters.readyToMarkUp);
   },
 
@@ -124,7 +153,7 @@ const filters = {
       //   name.dataset.status
       // );
     });
-    console.log(forFilter);
+
     filters.createItemsList();
   },
   changeStatusSizesCheckboxes(event) {
@@ -159,6 +188,8 @@ filters.priceForm.addEventListener(
   "input",
   _.throttle(filters.onPriceFormInput, 500)
 );
+console.log(filters.priceSwitcher);
+filters.priceSwitcher.addEventListener("click", filters.onpriceSwitcher);
 
 //
 //
