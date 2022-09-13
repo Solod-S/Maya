@@ -19,19 +19,42 @@ const filters = {
   catalog: document.querySelector(".cards_list"),
   priceForm: document.querySelector(".catloog__price-form"),
   priceSwitcher: document.querySelector(`.window__price-checkbox`),
-  onpriceSwitcher() {
-    // filters.readyToMarkUp = filters.readyToMarkUp.sort((a, b) => a - b);
-    // _.sortBy(filters.readyToMarkUp, filters.readyToMarkUp.price);
+  priceSwitcherIcon: document.querySelector(".window__toggl-icon"),
+  sortForMinPrice() {
     filters.readyToMarkUp = _.sortBy(
       filters.readyToMarkUp,
       (product) => product.price
     );
+    filters.priceSwitcher.dataset.status = "max";
+    return filters.createMarkUp(filters.readyToMarkUp);
+  },
+  sortForMaxPrice() {
+    filters.readyToMarkUp = _.sortBy(
+      filters.readyToMarkUp,
+      (product) => product.price
+    ).reverse();
+    filters.priceSwitcher.dataset.status = "min";
+    return filters.createMarkUp(filters.readyToMarkUp);
+  },
+  onpriceSwitcher() {
+    // filters.readyToMarkUp = filters.readyToMarkUp.sort((a, b) => a - b);
+    // _.sortBy(filters.readyToMarkUp, filters.readyToMarkUp.price);
     // filters.readyToMarkUp = _.sortBy(
     //   filters.readyToMarkUp,
     //   (product) => product.price
-    // ).reverse();
-    console.log(filters.readyToMarkUp);
-    filters.filter();
+    // );
+
+    const minPrice = filters.priceSwitcher.dataset.status === "min";
+    const maxPrice = filters.priceSwitcher.dataset.status === "max";
+
+    if (maxPrice) {
+      filters.sortForMaxPrice();
+      filters.priceSwitcherIcon.style = "transform: rotate(298deg)";
+    }
+    if (minPrice) {
+      filters.sortForMinPrice();
+      filters.priceSwitcherIcon.style = "";
+    }
   },
   onPriceFormInput(event) {
     forFilter.price[event.target.name] = Number(event.target.value);
@@ -189,7 +212,7 @@ filters.priceForm.addEventListener(
   _.throttle(filters.onPriceFormInput, 500)
 );
 console.log(filters.priceSwitcher);
-filters.priceSwitcher.addEventListener("click", filters.onpriceSwitcher);
+filters.priceSwitcher.addEventListener("change", filters.onpriceSwitcher);
 
 //
 //
