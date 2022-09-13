@@ -1862,6 +1862,8 @@ h4 {
 }
 
 .window__toggl-icon {
+  -webkit-transform: rotate(298deg);
+          transform: rotate(298deg);
   position: absolute;
   top: 18px;
   right: 17px;
@@ -1989,6 +1991,10 @@ h4 {
   display: flex;
 }
 
+.product-card__main-img-wrapper {
+  max-width: 50%;
+}
+
 .product-card__main-img {
   margin-bottom: 20px;
   border-radius: 10px;
@@ -2004,12 +2010,6 @@ h4 {
 
 .product-card__item:not(:last-child) {
   margin-right: 20px;
-}
-
-.product-card__img {
-  border-radius: 10px;
-  width: 103px;
-  height: 103px;
 }
 
 .product-card__title {
@@ -2032,7 +2032,6 @@ h4 {
 }
 
 .product-card__dscr-text {
-  width: 280px;
   margin-bottom: 28px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -2043,6 +2042,7 @@ h4 {
 }
 
 .product-card__compound {
+  margin-bottom: 8px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -2067,7 +2067,7 @@ h4 {
 }
 
 .product-card__sizes-title {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2096,12 +2096,14 @@ h4 {
   cursor: pointer;
 }
 
-.product-card__sizes-label input:checked + .product-card__sizes-square {
+.product-card .product-card__sizes-square.active {
   background-image: url(../img/checked.svg);
   background-size: 67%;
   background-position: center;
   background-repeat: no-repeat;
   background-origin: border-box;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .product-card__sizes-square {
@@ -2111,6 +2113,10 @@ h4 {
   height: 29px;
   background: var(--background-btn-color);
   border-radius: 8px;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 
 .product-card__sizes-text {
@@ -2148,12 +2154,14 @@ h4 {
   margin-right: 8px;
 }
 
-.product-card__color-label input:checked + .product-card__color-selector {
-  background-image: url(../img/checked.svg);
-  background-size: 67%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-origin: border-box;
+.product-card__color-label {
+  cursor: pointer;
+}
+
+.product-card .product-card__color-selector.active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  outline: 2px var(--primary-accent-color) solid;
 }
 
 .product-card__color-selector {
@@ -2162,10 +2170,14 @@ h4 {
   height: 29px;
   background: var(--background-btn-color);
   border-radius: 8px;
+  -webkit-transition: outline 250ms linear, -webkit-transform 250ms linear;
+  transition: outline 250ms linear, -webkit-transform 250ms linear;
+  transition: transform 250ms linear, outline 250ms linear;
+  transition: transform 250ms linear, outline 250ms linear, -webkit-transform 250ms linear;
 }
 
 .product-card__btn {
-  padding: 25px 57px;
+  padding: 20px 40px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2194,5 +2206,31 @@ h4 {
 
 .--black {
   background-color: #2f2233;
+}
+
+.product-card__list .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-card__list .slick-prev:before {
+  color: rgba(72, 72, 72, 0.3);
+  font-size: 30px;
+}
+
+.product-card__list .slick-next:before {
+  color: rgba(72, 72, 72, 0.3);
+  font-size: 30px;
+}
+
+.product-card__list .slick-prev.slick-arrow {
+  left: -7%;
 }
 /*# sourceMappingURL=main.css.map */

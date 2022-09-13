@@ -49,7 +49,7 @@ const filters = {
 
     if (maxPrice) {
       filters.sortForMaxPrice();
-      filters.priceSwitcherIcon.style = "transform: rotate(298deg)";
+      filters.priceSwitcherIcon.style = "transform: rotate(360deg)";
     }
     if (minPrice) {
       filters.sortForMinPrice();

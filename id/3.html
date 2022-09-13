@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Магазин нижнего белья для беременных" />
     <title>Document</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../slick/slick.css" />
+    <link rel="stylesheet" href="../slick/slick-theme.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./slick/slick.css" />
-    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <link rel="stylesheet" href="../slick/slick.css" />
+    <link rel="stylesheet" href="../slick/slick-theme.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.css"
@@ -22,21 +24,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="../css/main.min.css" />
   </head>
   <body>
     <!-- -------------------------------------------------------------------------HEADER-------------------------------------------------------------------------- */ -->
     <header class="header container">
-      <a href="./index.html">
+      <a href="../index.html">
         <h2 class="header__title header__about--modificator header__about--bg">
           Познакомьтесь с акциями этого месяца от MAYA
         </h2>
       </a>
       <div class="header__wrapper container">
-        <a class="logo" href="./index.html"
+        <a class="logo" href="../index.html"
           ><img
             class="logo__img"
-            src="./img/maya_logo-gray.svg"
+            src="../img/maya_logo-gray.svg"
             alt="логотип"
             width="160"
         /></a>
@@ -45,28 +47,28 @@
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__about--modificator"
-                href="./index.html"
+                href="../index.html"
                 >Главная</a
               >
             </li>
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__about--modificator"
-                href="./about.html"
+                href="../about.html"
                 >О нас</a
               >
             </li>
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__about--modificator --current-page"
-                href="./catalog.html"
+                href="../catalog.html"
                 >Каталог</a
               >
             </li>
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__about--modificator"
-                href="./delivery.html"
+                href="../delivery.html"
                 >Доставка</a
               >
             </li>
@@ -81,7 +83,7 @@
             width="40"
             height="40"
           >
-            <use href="./img/symbol-defs.svg#icon-tell"></use>
+            <use href="../img/symbol-defs.svg#icon-tell"></use>
           </svg>
           8 (800) 233-44-55</a
         >
@@ -92,88 +94,73 @@
       <section class="container product-card">
         <article class="product-card__article">
           <div class="product-card__main-img-wrapper">
-            <div class="gallery">
-              <a
-                href="./img/product-card-img-1.jpg"
-                class="product-card__main-img-link"
-              >
-                <img
-                  class="product-card__main-img"
-                  src="./img/product-card-img-1.jpg"
-                  alt="фотография товара"
-                  width="470"
-                  height="470"
-                />
-              </a>
-            </div>
-            <ul class="product-card__list">
-              <li class="product-card__item">
-                <a
-                  href="./img/product-card-img-1.jpg"
-                  class="product-card__link"
-                  ><img
-                    class="product-card__img"
-                    src="./img/product-card-img-1.jpg"
-                    alt="фотография товара"
-                    width="103"
-                /></a>
-              </li>
-              <li class="product-card__item">
-                <a
-                  href="./img/product-card-img-2.jpg"
-                  class="product-card__link"
-                  ><img
-                    class="product-card__img"
-                    src="./img/product-card-img-2.jpg"
-                    alt="фотография товара"
-                    width="103"
-                /></a>
-              </li>
-              <li class="product-card__item">
-                <a
-                  href="./img/product-card-img-3.jpg"
-                  class="product-card__link"
-                  ><img
-                    class="product-card__img"
-                    src="./img/product-card-img-3.jpg"
-                    alt="фотография товара"
-                    width="103"
-                /></a>
-              </li>
-              <li class="product-card__item">
-                <a
-                  href="./img/product-card-img-4.jpg"
-                  class="product-card__link"
-                  ><img
-                    class="product-card__img"
-                    src="./img/product-card-img-4.jpg"
-                    alt="фотография товара"
-                    width="103"
-                /></a>
-              </li>
-              <!-- <li class="product-card__item">
+            <ul class="product-card__list card">
+              <li class="product-card__item card">
                 <a href="#" class="product-card__link"
                   ><img
                     class="product-card__img"
-                    src="./img/product-card-img-5.jpg"
+                    src="../img/bra_skincare_nude_1.jpg"
                     alt="фотография товара"
-                    width="103"
+                    width=""
                 /></a>
-              </li> -->
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="../img/bra_skincare_nude_2.jpg"
+                    alt="фотография товара"
+                    width=""
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="../img/bra_skincare_nude_3.jpg"
+                    alt="фотография товара"
+                    width=""
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="../img/bra_skincare_nude_4.jpg"
+                    alt="фотография товара"
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="../img/bra_skincare_nude_5.jpg"
+                    alt="фотография товара"
+                /></a>
+              </li>
+              <li class="product-card__item">
+                <a href="#" class="product-card__link"
+                  ><img
+                    class="product-card__img"
+                    src="../img/bra_skincare_nude_6.jpg"
+                    alt="фотография товара"
+                /></a>
+              </li>
             </ul>
           </div>
           <div class="product-card__wrapper">
-            <h1 class="product-card__title">Заголовок Товара</h1>
+            <h1 class="product-card__title">Бюстгальтер-топ - SkinCare Grey</h1>
             <p class="product-card__dscr">
               <b>Описание товара:</b>
             </p>
             <p class="product-card__dscr-text">
-              Пару красивых предложений несколько преимуществ
+              Бюстгальтер с мягкими чашками одна из самых комфортных моделей для
+              всего периода беременности и грудного вскармливания.
             </p>
             <p class="product-card__compound">
               <b>Состав:</b>
             </p>
-            <p class="product-card__compound-text">105% хлопок, 10 % эластан</p>
+            <p class="product-card__compound-text">94% нейлон, 6% эластан</p>
             <form class="product-card__size-form">
               <h2 class="product-card__sizes-title"><b>Размер:</b></h2>
               <ul class="product-card__sizes-list">
@@ -182,6 +169,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">xs</span>
@@ -192,6 +180,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">s</span>
@@ -202,6 +191,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">m</span>
@@ -212,6 +202,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">l</span>
@@ -222,6 +213,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">xl</span>
@@ -232,6 +224,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">xxl</span>
@@ -242,6 +235,7 @@
                     <input
                       class="product-card__sizes-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__sizes-square"></span>
                     <span class="product-card__sizes-text">xxxl</span>
@@ -257,6 +251,7 @@
                     <input
                       class="product-card__color-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__color-selector --pink"></span>
                   </label>
@@ -266,6 +261,7 @@
                     <input
                       class="product-card__color-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__color-selector --yellow"></span>
                   </label>
@@ -275,6 +271,7 @@
                     <input
                       class="product-card__color-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__color-selector --beige"></span>
                   </label>
@@ -284,6 +281,7 @@
                     <input
                       class="product-card__color-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__color-selector --grey"></span>
                   </label>
@@ -293,6 +291,7 @@
                     <input
                       class="product-card__color-checkbox visually__hidden"
                       type="checkbox"
+                      data-status="off"
                     />
                     <span class="product-card__color-selector --black"></span>
                   </label>
@@ -323,14 +322,14 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <svg class="social__svg" width="57" height="57">
-                <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                <use href="../img/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
               <svg class="social__svg" width="58" height="57">
-                <use href="./img/symbol-defs.svg#icon-youtube"></use>
+                <use href="../img/symbol-defs.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
@@ -338,7 +337,7 @@
           <li class="social__item">
             <a class="social__link" href="#">
               <svg class="social__svg" width="58" height="57">
-                <use href="./img/symbol-defs.svg#icon-telegram"></use>
+                <use href="../img/symbol-defs.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
@@ -369,6 +368,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./js/product-gallery.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../slick/slick.min.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/product-gallery.js" type="module"></script>
   </body>
 </html>

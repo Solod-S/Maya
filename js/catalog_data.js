@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     name: "Бюстгальтер - Skincare Grey",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -8,6 +9,7 @@ export default [
     mainImg: "./img/bra_skincare_grey_1.jpg",
   },
   {
+    id: 2,
     name: "Бюстгальтер - Skincare Black",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -16,6 +18,7 @@ export default [
     mainImg: "./img/bra_skincare_black_1.jpg",
   },
   {
+    id: 3,
     name: "Бюстгальтер - Skincare Nude",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -24,6 +27,7 @@ export default [
     mainImg: "./img/bra_skincare_nude_1.jpg",
   },
   {
+    id: 4,
     name: "Бюстгальтер - Skincare Pink",
     category: "bra",
 
@@ -32,6 +36,7 @@ export default [
     mainImg: "./img/bra_skincare_pink_1.jpg",
   },
   {
+    id: 5,
     name: "Дородовый Бандаж - Anita White",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -40,6 +45,7 @@ export default [
     mainImg: "./img/bandage_anita_babybelt_white_1.jpg",
   },
   {
+    id: 6,
     name: "Дородовый Бандаж - Anita Nude",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -48,6 +54,7 @@ export default [
     mainImg: "./img/bandage_anita_babybelt_nude_1.jpg",
   },
   {
+    id: 7,
     name: "Дородовый Бандаж - Anita Black",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -56,6 +63,7 @@ export default [
     mainImg: "./img/bandage_anita_babybelt_black_1.jpg",
   },
   {
+    id: 8,
     name: "Комплект - Anais Grey",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -64,6 +72,7 @@ export default [
     mainImg: "./img/kit_anais_2.jpg",
   },
   {
+    id: 9,
     name: "Комплект - Anais Pink",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -72,6 +81,7 @@ export default [
     mainImg: "./img/kit_perla_3.jpg",
   },
   {
+    id: 10,
     name: "Комплект - Anais Milki",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -80,6 +90,7 @@ export default [
     mainImg: "./img/kit_milki_2.jpg",
   },
   {
+    id: 11,
     name: "Комплект - Anais Provance",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -88,6 +99,7 @@ export default [
     mainImg: "./img/kit_provance_8.jpg",
   },
   {
+    id: 12,
     name: "Комплект - Anais Tiffany",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -96,6 +108,7 @@ export default [
     mainImg: "./img/kit_tiffany_6.jpg",
   },
   {
+    id: 13,
     name: "Трусики-бандаж - MumsCare Pink",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -104,6 +117,7 @@ export default [
     mainImg: "./img/panties_pink_1.jpg",
   },
   {
+    id: 14,
     name: "Трусики-бандаж - MumsCare Grey",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -112,6 +126,7 @@ export default [
     mainImg: "./img/panties_grey_1.jpg",
   },
   {
+    id: 15,
     name: "Трусики-бандаж - MumsCare Nude",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -120,6 +135,7 @@ export default [
     mainImg: "./img/panties_nude_1.jpg",
   },
   {
+    id: 16,
     name: "Трусики-бандаж - MumsCare Black",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
