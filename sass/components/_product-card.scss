@@ -3,6 +3,7 @@
   padding-bottom: 120px;
   &__article {
     display: flex;
+    align-items: center;
   }
 
   &__main-img-wrapper {
@@ -216,6 +217,9 @@
     color: #ffffff;
   }
 }
+.--white {
+  background-color: #f9f8f8;
+}
 .--pink {
   background-color: #ffe1e3;
 }
@@ -223,14 +227,17 @@
 .--yellow {
   background-color: #fbd05d;
 }
-.--beige {
-  background-color: #e9d1c7;
+.--nude {
+  background-color: #cc9e72;
 }
 .--grey {
   background-color: #959fa7;
 }
 .--black {
   background-color: #2f2233;
+}
+.--tiffany {
+  background-color: #b5fdfc;
 }
 .product-card__list .slick-track {
   display: flex;

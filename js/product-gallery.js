@@ -1,36 +1,33 @@
-// const productGalery = {
-//   lightbox: "",
-//   productImagesEl: document.querySelector(".product-card__list"),
-//   mainImageEl: document.querySelector(".product-card__main-img"),
-//   mainLinkEl: document.querySelector(".product-card__main-img-link"),
-//   // btn: document.querySelector(".sl-close"),
-//   selectMainImage(event) {
-//     event.preventDefault();
-//     if (event.target.nodeName !== "IMG") {
-//       return;
-//     }
-//     productGalery.mainImageEl.src = event.target.src;
-//     productGalery.mainLinkEl.href = event.target.src;
-//     console.log(event.target.src);
-//     productGalery.select();
-//   },
-//   select() {
-//     productGalery.lightbox = new SimpleLightbox(".gallery a", {
-//       captionType: "alt",
-//       captionsData: "alt",
-//       captionDelay: 200,
-//       showCounter: false,
-//       maxZoom: 2,
-//       scrollZoomFactor: 0.1,
-//     });
-//   },
-// };
+import products from "./catalog_data.js";
+const source = document.getElementById("entry-template").innerHTML;
 
-// productGalery.productImagesEl.addEventListener(
-//   "click",
-//   productGalery.selectMainImage
-// );
-// productGalery.mainImageEl.addEventListener("click", productGalery.select);
+function FindCurrentCard() {
+  const path = window.location.pathname;
+
+  const page = path.split("/").pop();
+
+  const pageNumber = [];
+  for (let i of page.split("")) {
+    if (i === ".") {
+      break;
+    }
+    pageNumber.push(i);
+  }
+
+  return Number(pageNumber.join("")) - 1;
+}
+
+const template = Handlebars.compile(source);
+
+const sectionRefs = {
+  productCard: document.querySelector(".product-card"),
+};
+
+// sectionRefs.productCard.innerHTML = "";
+sectionRefs.productCard.insertAdjacentHTML(
+  "beforeend",
+  template(products[FindCurrentCard()])
+);
 
 const sizesCheckbox = {
   checkboxForm: document.querySelector(`.product-card__size-form`),
@@ -50,7 +47,6 @@ const sizesCheckbox = {
   },
 };
 sizesCheckbox.checkboxForm.addEventListener("change", sizesCheckbox.onCheckbox);
-console.log(sizesCheckbox.checkboxForm);
 
 const colorCheckbox = {
   checkboxForm: document.querySelector(`.product-card__color-form`),
@@ -70,4 +66,3 @@ const colorCheckbox = {
   },
 };
 colorCheckbox.checkboxForm.addEventListener("change", colorCheckbox.onCheckbox);
-console.log(colorCheckbox.checkboxForm);
