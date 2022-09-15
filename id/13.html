@@ -198,16 +198,25 @@
           <form class="product-card__color-form">
             <h2 class="product-card__color-title"><b>Цвет:</b></h2>
             <ul class="product-card__color-list">
-              <li class="product-card__color-item">
-                <label class="product-card__color-label">
-                  <input
-                    class="product-card__color-checkbox visually__hidden"
-                    type="checkbox"
-                    data-status="off"
-                  />
-                  <span class="product-card__color-selector {{color}}"></span>
-                </label>
-              </li>
+              {{#each stock}}
+                <li class="product-card__color-item">
+                  <a href="../id/{{this.id}}.html">
+                    <!-- <label class="product-card__color-label">
+                      <input
+                        class="product-card__color-checkbox visually__hidden"
+                        type="checkbox"
+                        data-status="off"
+                      />
+                      <span
+                        class="product-card__color-selector {{this.color}}"
+                      ></span>
+                    </label> -->
+                    <span
+                      class="product-card__color-selector {{this.color}}"
+                    ></span>
+                  </a>
+                </li>
+              {{/each}}
             </ul>
           </form>
           <button class="product-card__btn">Заказать</button>

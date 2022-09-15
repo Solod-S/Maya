@@ -48,21 +48,41 @@ const sizesCheckbox = {
 };
 sizesCheckbox.checkboxForm.addEventListener("change", sizesCheckbox.onCheckbox);
 
-const colorCheckbox = {
-  checkboxForm: document.querySelector(`.product-card__color-form`),
-  onCheckbox(event) {
-    const active = colorCheckbox.checkboxForm.querySelector(".active");
-    if (active) {
-      active.classList.remove("active");
-      active.previousElementSibling.dataset.status = "off";
-    }
-    if (event.target.nextElementSibling === active) {
-      event.target.nextElementSibling.classList.remove(`active`);
-      event.target.dataset.status = "off";
-      return;
-    }
-    event.target.nextElementSibling.classList.add("active");
-    event.target.dataset.status = "on";
+// если через чек боксы
+// const colorCheckbox = {
+//   checkboxForm: document.querySelector(`.product-card__color-form`),
+//   onCheckbox(event) {
+//     const active = colorCheckbox.checkboxForm.querySelector(".active");
+//     if (active) {
+//       active.classList.remove("active");
+//       active.previousElementSibling.dataset.status = "off";
+//     }
+//     if (event.target.nextElementSibling === active) {
+//       event.target.nextElementSibling.classList.remove(`active`);
+//       event.target.dataset.status = "off";
+//       return;
+//     }
+//     event.target.nextElementSibling.classList.add("active");
+//     event.target.dataset.status = "on";
+//   },
+// };
+// colorCheckbox.checkboxForm.addEventListener("change", colorCheckbox.onCheckbox);
+const colorCheck = {
+  colorCheckElements: document.querySelectorAll(
+    `.product-card__color-selector`
+  ),
+  oncolorCheck(event) {
+    // const currentColor = colorCheck.colorCheckElements.classList.contains(products[FindCurrentCard().color)
+    // if (currentColor) {
+    //   currentColor.classList.add('active')
+    // }
+    colorCheck.colorCheckElements.forEach((name) => {
+      const currentColor = products[FindCurrentCard()].color;
+      console.log(currentColor);
+      if (name.classList.contains(currentColor)) {
+        name.classList.add("active");
+      }
+    });
   },
 };
-colorCheckbox.checkboxForm.addEventListener("change", colorCheckbox.onCheckbox);
+colorCheck.oncolorCheck();
