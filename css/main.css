@@ -270,6 +270,7 @@ summary {
   --secondary-title-color: #6d6868;
   --secondary-bg-color: #f8eff2;
   --about-header-color: #484848;
+  --price-color: #4d4d4d;
   --background-btn-color: #e4eef2;
 }
 
@@ -1945,7 +1946,7 @@ h4 {
   font-size: 17px;
   line-height: calc(24 / 20);
   text-align: center;
-  color: var(--main-title-color);
+  color: var(--price-color);
 }
 
 .cards_btn {
@@ -2016,13 +2017,24 @@ h4 {
 }
 
 .product-card__title {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
   line-height: calc(37 / 30);
   color: #4d4d4d;
+}
+
+.product-card__price {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: calc(37 / 30);
+  color: var(--price-color);
 }
 
 .product-card__dscr {
@@ -2107,6 +2119,7 @@ h4 {
   background-origin: border-box;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  outline: 2px var(--primary-accent-color) solid;
 }
 
 .product-card__sizes-square {
@@ -2134,7 +2147,7 @@ h4 {
 }
 
 .product-card__color-form {
-  margin-bottom: 66px;
+  margin-bottom: 26px;
 }
 
 .product-card__color-title {
@@ -2215,6 +2228,10 @@ h4 {
   background-color: #2f2233;
 }
 
+.--milky {
+  background-color: #f7e4e4;
+}
+
 .--tiffany {
   background-color: #b5fdfc;
 }
@@ -2243,5 +2260,9 @@ h4 {
 
 .product-card__list .slick-prev.slick-arrow {
   left: -7%;
+}
+
+.sl-image {
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,13 @@
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.css"
+      integrity="sha512-I/31oIfN7Ki1YPEt0Mv9yyKMXkRmI4xKFRvus0plHCFIOaXC3RuBMaG7LQa+L6ZAeNz5NKXlk8Czr11/1/hR5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../slick/slick.css" />
     <link rel="stylesheet" href="../slick/slick-theme.css" />
     <link
@@ -156,7 +163,7 @@
       <article class="product-card__article">
         <div class="product-card__main-img-wrapper">
           <ul class="product-card__list card">
-            {{#each images}}<li class="product-card__item">
+            {{#each images}}<li class="product-card__item" href="{{this}}">
                 <a href="#" class="product-card__link"><img
                     class="product-card__img"
                     src={{this}}
@@ -168,6 +175,7 @@
         </div>
         <div class="product-card__wrapper">
           <h1 class="product-card__title">{{name}}</h1>
+
           <p class="product-card__dscr">
             <b>Описание товара:</b>
           </p>
@@ -218,11 +226,19 @@
                 </li>
               {{/each}}
             </ul>
+
           </form>
+          <p class="product-card__price"> {{price}}грн </p>
           <button class="product-card__btn">Заказать</button>
         </div>
       </article>
     </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"
+      integrity="sha512-XGiM73niqHXRwBELBEktUKuGXC9yHyaxEsVWvUiCph8yxkaNkGeXJnqs5Ls1RSp4Q+PITMcCy2Dw7HxkzBWQCw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
       integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="

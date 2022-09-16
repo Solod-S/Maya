@@ -32,7 +32,7 @@ sectionRefs.productCard.insertAdjacentHTML(
 const sizesCheckbox = {
   checkboxForm: document.querySelector(`.product-card__size-form`),
   onCheckbox(event) {
-    const active = sizesCheckbox.checkboxForm.querySelector(".active");
+    const active = this.checkboxForm.querySelector(".active");
     if (active) {
       active.classList.remove("active");
       active.previousElementSibling.dataset.status = "off";
@@ -46,7 +46,10 @@ const sizesCheckbox = {
     event.target.dataset.status = "on";
   },
 };
-sizesCheckbox.checkboxForm.addEventListener("change", sizesCheckbox.onCheckbox);
+sizesCheckbox.checkboxForm.addEventListener(
+  "change",
+  sizesCheckbox.onCheckbox.bind(sizesCheckbox)
+);
 
 // если через чек боксы
 // const colorCheckbox = {
@@ -86,3 +89,11 @@ const colorCheck = {
   },
 };
 colorCheck.oncolorCheck();
+
+const lightbox = new SimpleLightbox(".product-card__item ", {
+  captionDelay: 200,
+  showCounter: false,
+  maxZoom: 3,
+  scrollZoomFactor: 0.1,
+});
+console.log(lightbox);

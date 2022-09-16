@@ -21,39 +21,39 @@ const filters = {
   priceSwitcher: document.querySelector(`.window__price-checkbox`),
   priceSwitcherIcon: document.querySelector(".window__toggl-icon"),
   sortForMinPrice() {
-    filters.readyToMarkUp = _.sortBy(
-      filters.readyToMarkUp,
+    this.readyToMarkUp = _.sortBy(
+      this.readyToMarkUp,
       (product) => product.price
     );
-    filters.priceSwitcher.dataset.status = "max";
-    return filters.createMarkUp(filters.readyToMarkUp);
+    this.priceSwitcher.dataset.status = "max";
+    return this.createMarkUp(this.readyToMarkUp);
   },
   sortForMaxPrice() {
-    filters.readyToMarkUp = _.sortBy(
-      filters.readyToMarkUp,
+    this.readyToMarkUp = _.sortBy(
+      this.readyToMarkUp,
       (product) => product.price
     ).reverse();
-    filters.priceSwitcher.dataset.status = "min";
-    return filters.createMarkUp(filters.readyToMarkUp);
+    this.priceSwitcher.dataset.status = "min";
+    return this.createMarkUp(this.readyToMarkUp);
   },
   onpriceSwitcher() {
-    // filters.readyToMarkUp = filters.readyToMarkUp.sort((a, b) => a - b);
-    // _.sortBy(filters.readyToMarkUp, filters.readyToMarkUp.price);
-    // filters.readyToMarkUp = _.sortBy(
-    //   filters.readyToMarkUp,
+    // this.readyToMarkUp = this.readyToMarkUp.sort((a, b) => a - b);
+    // _.sortBy(this.readyToMarkUp, this.readyToMarkUp.price);
+    // this.readyToMarkUp = _.sortBy(
+    //   this.readyToMarkUp,
     //   (product) => product.price
     // );
 
-    const minPrice = filters.priceSwitcher.dataset.status === "min";
-    const maxPrice = filters.priceSwitcher.dataset.status === "max";
+    const minPrice = this.priceSwitcher.dataset.status === "min";
+    const maxPrice = this.priceSwitcher.dataset.status === "max";
 
     if (maxPrice) {
-      filters.sortForMaxPrice();
-      filters.priceSwitcherIcon.style = "transform: rotate(360deg)";
+      this.sortForMaxPrice();
+      this.priceSwitcherIcon.style = "transform: rotate(360deg)";
     }
     if (minPrice) {
-      filters.sortForMinPrice();
-      filters.priceSwitcherIcon.style = "";
+      this.sortForMinPrice();
+      this.priceSwitcherIcon.style = "";
     }
   },
   onPriceFormInput(event) {
@@ -65,19 +65,19 @@ const filters = {
       forFilter.price.from = 1;
     }
     console.log(forFilter.price);
-    filters.filter();
+    this.filter();
   },
   onSearchInput(event) {
     const onSearchInput = event.target.value.toLowerCase();
 
     const filterFind = products.filter((item) =>
-      item.name.toLocaleLowerCase().includes(onSearchInput)
+      item.name.toLocaleLowerCase().includes(onSearchInput.trim())
     );
     if (filterFind.length === 0 || onSearchInput.length === 0) {
-      return filters.createMarkUp(filters.readyToMarkUp);
+      return this.createMarkUp(this.readyToMarkUp);
     }
-    filters.createMarkUp(filters.readyToMarkUp);
-    filters.createMarkUp(filterFind);
+    this.createMarkUp(this.readyToMarkUp);
+    this.createMarkUp(filterFind);
   },
   createItemsList() {
     const entriesCategory = Object.entries(forFilter.category);
@@ -101,13 +101,13 @@ const filters = {
       }
     });
 
-    filters.filter();
+    this.filter();
   },
   filter() {
     const categoryActive = Object.values(forFilter.category).includes("on");
     const sizesActive = Object.values(forFilter.sizes).includes("on");
     if (categoryActive) {
-      filters.readyToMarkUp = products.filter((product) => {
+      this.readyToMarkUp = products.filter((product) => {
         for (let [name, value] of Object.entries(forFilter.category)) {
           // console.log(product.category, name, value);
           if (product.category === name && value === "on") {
@@ -116,7 +116,7 @@ const filters = {
         }
       });
       if (sizesActive) {
-        filters.readyToMarkUp = filters.readyToMarkUp.filter((product) => {
+        this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
           for (let size of product.sizes) {
             for (let [name, value] of Object.entries(forFilter.sizes)) {
               if (size === name && value === "on") {
@@ -128,10 +128,10 @@ const filters = {
       }
     }
     if (!categoryActive) {
-      filters.readyToMarkUp = products;
+      this.readyToMarkUp = products;
     }
     if (sizesActive) {
-      filters.readyToMarkUp = filters.readyToMarkUp.filter((product) => {
+      this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
         for (let size of product.sizes) {
           for (let [name, value] of Object.entries(forFilter.sizes)) {
             if (size === name && value === "on") {
@@ -142,7 +142,7 @@ const filters = {
       });
     }
 
-    filters.readyToMarkUp = filters.readyToMarkUp.filter((product) => {
+    this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
       if (
         product.price >= forFilter.price.from &&
         product.price <= forFilter.price.to
@@ -150,14 +150,14 @@ const filters = {
         return true;
       }
     });
-    return filters.createMarkUp(filters.readyToMarkUp);
+    return this.createMarkUp(this.readyToMarkUp);
   },
 
   createMarkUp(filtered) {
     const cardsEl = template(filtered);
 
-    filters.catalog.innerHTML = "";
-    filters.catalog.insertAdjacentHTML("beforeend", cardsEl);
+    this.catalog.innerHTML = "";
+    this.catalog.insertAdjacentHTML("beforeend", cardsEl);
   },
   changeStatusCatCheckboxes(event) {
     if (event.target.checked) {
@@ -167,7 +167,7 @@ const filters = {
       event.target.dataset.status = "off";
       // console.log("Checkbox is not checked..");
     }
-    filters.categoryCheckboxes.forEach((name) => {
+    this.categoryCheckboxes.forEach((name) => {
       forFilter.category[name.dataset.category] = name.dataset.status;
       // console.log(
       //   `имя категории:`,
@@ -177,7 +177,7 @@ const filters = {
       // );
     });
 
-    filters.createItemsList();
+    this.createItemsList();
   },
   changeStatusSizesCheckboxes(event) {
     if (event.target.checked) {
@@ -187,7 +187,7 @@ const filters = {
       event.target.dataset.status = "off";
       // console.log("Checkbox is not checked..");
     }
-    filters.sizesCheckboxes.forEach((name) => {
+    this.sizesCheckboxes.forEach((name) => {
       forFilter.sizes[name.dataset.size] = name.dataset.status;
       // console.log(
       //   `имя категории:`,
@@ -197,183 +197,27 @@ const filters = {
       // );
     });
 
-    filters.createItemsList();
+    this.createItemsList();
   },
 };
 
-filters.category.addEventListener("change", filters.changeStatusCatCheckboxes);
-filters.sizes.addEventListener("change", filters.changeStatusSizesCheckboxes);
+filters.category.addEventListener(
+  "change",
+  filters.changeStatusCatCheckboxes.bind(filters)
+);
+filters.sizes.addEventListener(
+  "change",
+  filters.changeStatusSizesCheckboxes.bind(filters)
+);
 filters.searchInput.addEventListener(
   "input",
-  _.throttle(filters.onSearchInput, 500)
+  _.throttle(filters.onSearchInput.bind(filters), 500)
 );
 filters.priceForm.addEventListener(
   "input",
-  _.throttle(filters.onPriceFormInput, 500)
+  _.throttle(filters.onPriceFormInput.bind(filters), 500)
 );
-console.log(filters.priceSwitcher);
-filters.priceSwitcher.addEventListener("change", filters.onpriceSwitcher);
-
-//
-//
-//
-//
-//=======================================
-//
-//
-//
-//
-
-// import products from "./catalog_data.js";
-// const source = document.getElementById("entry-template").innerHTML;
-
-// const template = Handlebars.compile(source);
-// const forFilter = {
-//   category: {},
-//   sizes: {},
-//   price: {},
-// };
-
-// const itemsList = [];
-// const filters = {
-//   readyToMarkUp: products,
-//   searchInput: document.querySelector(".window__search"),
-//   category: document.querySelector(".catloog__category-list"),
-//   categoryCheckboxes: document.querySelectorAll(".catloog__category-checkbox"),
-//   sizes: document.querySelector(".catloog__sizes-list"),
-//   sizesCheckboxes: document.querySelectorAll(".catloog__sizes-checkbox"),
-//   catalog: document.querySelector(".cards_list"),
-//   priceForm: document.querySelector(".catloog__price-form"),
-//   onPriceFormInput(event) {
-//     forFilter.price[event.target.name] = event.target.value;
-//     console.log(forFilter.price);
-//     // filters.filter(forFilter);
-//   },
-//   onSearchInput(event) {
-//     const onSearchInput = event.target.value.toLowerCase();
-
-//     const filterFind = products.filter((item) =>
-//       item.name.toLocaleLowerCase().includes(onSearchInput)
-//     );
-//     if (filterFind.length === 0 || onSearchInput.length === 0) {
-//       return filters.createMarkUp(filters.readyToMarkUp);
-//     }
-//     filters.createMarkUp(filters.readyToMarkUp);
-//     filters.createMarkUp(filterFind);
-//   },
-//   createItemsList() {
-//     const entriesCategory = Object.entries(forFilter.category);
-//     const entriesSizes = Object.entries(forFilter.sizes);
-//     // forFilter.category {bandage: 'on'} => [['bandage', 'on']]
-//     entriesCategory.forEach(([key, value]) => {
-//       if (value === "off" && itemsList.includes(key)) {
-//         const indexForRemove = itemsList.indexOf(key);
-//         itemsList.splice(indexForRemove, 1);
-//       } else if (value === "on" && !itemsList.includes(key)) {
-//         itemsList.push(key);
-//       }
-//     });
-//     entriesSizes.forEach(([key, value]) => {
-//       if (value === "off" && itemsList.includes(key)) {
-//         const indexForRemove = itemsList.indexOf(key);
-//         itemsList.splice(indexForRemove, 1);
-//         console.log(`!`);
-//       } else if (value === "on" && !itemsList.includes(key)) {
-//         itemsList.push(key);
-//       }
-//     });
-
-//     filters.filter(itemsList);
-//   },
-//   filter(income) {
-//     console.log(products[2].sizes);
-//     if (income.length === 0) {
-//       filters.createMarkUp(products);
-//       console.log(`createMarkUp`);
-//     } else {
-//       // const filteredByCategory = products.filter((product) => {
-//       //   return income.includes(product.category);
-//       //   // return product.category.includes(...income);
-//       filters.readyToMarkUp = products.filter((product) => {
-//         for (let size of product.sizes) {
-//           if (income.includes(product.category) && income.includes(size)) {
-//             return true;
-//           } else if (income.includes(size)) {
-//             return true;
-//           } else if (income.includes(product.category)) {
-//             return true;
-//           }
-
-//           // if (income.includes(size)) {
-//           //   return true;
-//           // }
-//           // if (income.includes(product.category)) {
-//           //   return true;
-//           // }
-//         }
-//         // console.log(product.sizes);
-//         return income.includes(product.sizes);
-//       });
-//       console.log(forFilter);
-//       return filters.createMarkUp(filters.readyToMarkUp);
-//     }
-//   },
-
-//   createMarkUp(filtered) {
-//     const cardsEl = template(filtered);
-
-//     filters.catalog.innerHTML = "";
-//     filters.catalog.insertAdjacentHTML("beforeend", cardsEl);
-//   },
-//   changeStatusCatCheckboxes(event) {
-//     if (event.target.checked) {
-//       // console.log("Checkbox is checked..");
-//       event.target.dataset.status = "on";
-//     } else if (!event.target.checked) {
-//       event.target.dataset.status = "off";
-//       // console.log("Checkbox is not checked..");
-//     }
-//     filters.categoryCheckboxes.forEach((name) => {
-//       forFilter.category[name.dataset.category] = name.dataset.status;
-//       // console.log(
-//       //   `имя категории:`,
-//       //   name.dataset.category,
-//       //   `статус:`,
-//       //   name.dataset.status
-//       // );
-//     });
-//     console.log(forFilter);
-//     filters.createItemsList();
-//   },
-//   changeStatusSizesCheckboxes(event) {
-//     if (event.target.checked) {
-//       // console.log("Checkbox is checked..");
-//       event.target.dataset.status = "on";
-//     } else if (!event.target.checked) {
-//       event.target.dataset.status = "off";
-//       // console.log("Checkbox is not checked..");
-//     }
-//     filters.sizesCheckboxes.forEach((name) => {
-//       forFilter.sizes[name.dataset.size] = name.dataset.status;
-//       // console.log(
-//       //   `имя категории:`,
-//       //   name.dataset.size,
-//       //   `статус:`,
-//       //   name.dataset.status
-//       // );
-//     });
-
-//     filters.createItemsList();
-//   },
-// };
-
-// filters.category.addEventListener("change", filters.changeStatusCatCheckboxes);
-// filters.sizes.addEventListener("change", filters.changeStatusSizesCheckboxes);
-// filters.searchInput.addEventListener(
-//   "input",
-//   _.throttle(filters.onSearchInput, 500)
-// );
-// filters.priceForm.addEventListener(
-//   "input",
-//   _.throttle(filters.onPriceFormInput, 500)
-// );
+filters.priceSwitcher.addEventListener(
+  "change",
+  filters.onpriceSwitcher.bind(filters)
+);
