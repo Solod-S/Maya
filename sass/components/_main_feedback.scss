@@ -22,7 +22,8 @@
     margin-top: -76px;
     margin-bottom: 78px;
   }
-  &__item {
+  &__item,
+  &__item.aos-init.aos-animate {
     position: relative;
     margin-left: 126px;
     margin-top: 76px;
@@ -35,6 +36,7 @@
       z-index: 1;
     }
   }
+
   // .main-feedback__link {
   // }
   &__img {
@@ -44,6 +46,9 @@
       rgba(241, 205, 209, 0.6),
       rgba(241, 205, 209, 0.6)
     );
+  }
+  &__btn.disabled {
+    background-color: grey;
   }
 }
 

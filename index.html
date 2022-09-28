@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400&family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./slick/slick.css" />
     <link rel="stylesheet" href="./slick/slick-theme.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
@@ -287,7 +288,7 @@
               <p class="main-feedback__text">Арина 35 лет</p>
             </a>
           </li>
-
+          <!-- 
           <li class="main-feedback__item">
             <a class="main-feedback__link" href="#">
               <img
@@ -362,7 +363,7 @@
               </svg>
               <p class="main-feedback__text">Вика 28 лет</p>
             </a>
-          </li>
+          </li> -->
         </ul>
         <button class="main-feedback__btn">
           Посмотреть еще больше отзывов
@@ -482,8 +483,41 @@
         <span class="copyright__number">8(800)-888-44-55</span>
       </div>
     </footer>
+    <script id="entry-template-feedback" type="text/x-handlebars-template">
+      {{#each this}}
+            <li class="main-feedback__item" data-aos="zoom-out" data-aos-duration="700">
+            <a class="main-feedback__link" href="#">
+              <img
+                class="main-feedback__img"
+                src={{avatar}}
+                alt={{name}}
+              />
+              <svg
+                class="main-feedback__svg"
+                width="34"
+                height="34"
+                aria-label="Старт"
+              >
+                <use href="./img/symbol-defs.svg#icon-play"></use>
+              </svg>
+              <p class="main-feedback__text">{{name}} {{age}} лет</p>
+            </a>
+          </li>
+        </li>{{/each}}
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+      integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/main-feedback.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
