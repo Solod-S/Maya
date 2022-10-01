@@ -221,3 +221,11 @@ filters.priceSwitcher.addEventListener(
   "change",
   filters.onpriceSwitcher.bind(filters)
 );
+
+const currentSearch = JSON.parse(localStorage.getItem("inputLocallStorageKey"));
+// переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
+if (currentSearch) {
+  const selected = document.querySelector(`[data-category=${currentSearch}]`);
+  selected.click();
+  localStorage.removeItem("inputLocallStorageKey");
+}

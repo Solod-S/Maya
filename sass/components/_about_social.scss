@@ -93,4 +93,7 @@
     margin-right: auto;
     display: block;
   }
+  &__btn.disabled {
+    background-color: grey;
+  }
 }
