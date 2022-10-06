@@ -1,6 +1,7 @@
 export default [
   {
     id: 1,
+    new: [true],
     name: "Бюстгальтер - Skincare Grey",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -27,6 +28,7 @@ export default [
   },
   {
     id: 2,
+    new: false,
     name: "Бюстгальтер - Skincare Black",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -53,6 +55,7 @@ export default [
   },
   {
     id: 3,
+    new: false,
     name: "Бюстгальтер - Skincare Nude",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -81,6 +84,7 @@ export default [
 
   {
     id: 4,
+    new: false,
     name: "Бюстгальтер - Skincare Pink",
     category: "bra",
 
@@ -108,6 +112,7 @@ export default [
   },
   {
     id: 5,
+    new: true,
     name: "Дородовый Бандаж - Anita White",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -133,6 +138,7 @@ export default [
   },
   {
     id: 6,
+    new: false,
     name: "Дородовый Бандаж - Anita Nude",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -159,6 +165,7 @@ export default [
   },
   {
     id: 7,
+    new: false,
     name: "Дородовый Бандаж - Anita Black",
     category: "bandage",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -184,6 +191,7 @@ export default [
   },
   {
     id: 8,
+    new: true,
     name: "Комплект - Anais Grey",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -209,6 +217,7 @@ export default [
   },
   {
     id: 9,
+    new: false,
     name: "Комплект - Anais Pink",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -239,6 +248,7 @@ export default [
   },
   {
     id: 10,
+    new: false,
     name: "Комплект - Anais Milki",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -269,6 +279,7 @@ export default [
   },
   {
     id: 11,
+    new: false,
     name: "Комплект - Anais Provance",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -299,6 +310,7 @@ export default [
   },
   {
     id: 12,
+    new: false,
     name: "Комплект - Anais Tiffany",
     category: "kit",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -329,6 +341,7 @@ export default [
   },
   {
     id: 13,
+    new: true,
     name: "Трусики-бандаж - MumsCare Pink",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -354,6 +367,7 @@ export default [
   },
   {
     id: 14,
+    new: false,
     name: "Трусики-бандаж - MumsCare Grey",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -379,6 +393,7 @@ export default [
   },
   {
     id: 15,
+    new: false,
     name: "Трусики-бандаж - MumsCare Nude",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],
@@ -404,6 +419,7 @@ export default [
   },
   {
     id: 16,
+    new: false,
     name: "Трусики-бандаж - MumsCare Black",
     category: "panties",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],

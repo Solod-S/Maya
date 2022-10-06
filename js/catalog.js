@@ -224,8 +224,19 @@ filters.priceSwitcher.addEventListener(
 
 const currentSearch = JSON.parse(localStorage.getItem("inputLocallStorageKey"));
 // переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
+const currentSearchNewProducts = JSON.parse(
+  localStorage.getItem("inputLocallStorageKeyForNewProducts")
+);
 if (currentSearch) {
   const selected = document.querySelector(`[data-category=${currentSearch}]`);
   selected.click();
   localStorage.removeItem("inputLocallStorageKey");
+}
+
+if (currentSearchNewProducts) {
+  const selected = document.querySelector(
+    `[data-category=${currentSearchNewProducts}]`
+  );
+  selected.click();
+  localStorage.removeItem("inputLocallStorageKeyForNewProducts");
 }
