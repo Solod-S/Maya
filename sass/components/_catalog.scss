@@ -308,7 +308,23 @@
     flex-wrap: wrap;
     gap: 28px;
   }
+  &_newLabel {
+    position: absolute;
+    color: red;
+    background-color: white;
+    width: 88px;
+    text-align: center;
+    right: -22px;
+    top: 10px;
+    transform: rotate(42deg);
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+  }
   &_item {
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
     padding-bottom: 5px;
     max-width: 180px;

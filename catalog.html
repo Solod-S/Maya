@@ -275,6 +275,7 @@
 
             <ul class="cards_list">
               <li class="cards_item">
+                <p class="cards_newLabel">new</p>
                 <a href="./id/1.html">
                   <img
                     class="cards_img"
@@ -339,6 +340,7 @@
                 </a>
               </li>
               <li class="cards_item">
+                <p class="cards_newLabel">new</p>
                 <a href="./id/5.html">
                   <img
                     class="cards_img"
@@ -387,6 +389,7 @@
                 </a>
               </li>
               <li class="cards_item">
+                <p class="cards_newLabel">new</p>
                 <a href="./id/8.html">
                   <img
                     class="cards_img"
@@ -467,6 +470,7 @@
                 </a>
               </li>
               <li class="cards_item">
+                <p class="cards_newLabel">new</p>
                 <a href="./id/13.html">
                   <img
                     class="cards_img"
@@ -604,6 +608,9 @@
     <script id="entry-template" type="text/x-handlebars-template">
       {{#each this}}
         <li class="cards_item" data-aos="zoom-out" data-aos-duration="700">
+          {{#if new}}
+            <p class="cards_newLabel">new</p>
+          {{/if}}
           <a href="./id/{{id}}.html">
             <img class="cards_img" src={{mainImg}} alt="товар" width="244" />
             <h3 data-category={{category}} class="cards_title">
