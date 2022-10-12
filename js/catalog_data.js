@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    new: [true],
+    new: true,
     name: "Бюстгальтер - Skincare Grey",
     category: "bra",
     // sizes: ["xs", "s", "m", "l", "xl", "xxl", "xxxl"],

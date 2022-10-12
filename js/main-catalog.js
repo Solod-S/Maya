@@ -27,5 +27,5 @@ const mainNovelties = {
   },
 };
 mainNovelties.linkElements.forEach((el) =>
-  el.addEventListener("click", catalogRefs.onLink)
+  el.addEventListener("click", mainNovelties.onLink)
 );

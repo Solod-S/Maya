@@ -20,6 +20,7 @@ const filters = {
   priceForm: document.querySelector(".catloog__price-form"),
   priceSwitcher: document.querySelector(`.window__price-checkbox`),
   priceSwitcherIcon: document.querySelector(".window__toggl-icon"),
+  showNewProductEL: document.querySelector(".window__price-checkbox-new"),
   sortForMinPrice() {
     this.readyToMarkUp = _.sortBy(
       this.readyToMarkUp,
@@ -33,8 +34,30 @@ const filters = {
       this.readyToMarkUp,
       (product) => product.price
     ).reverse();
+ 
     this.priceSwitcher.dataset.status = "min";
     return this.createMarkUp(this.readyToMarkUp);
+  },
+  sortForNewProducts() {
+    const {dataset} = this.showNewProductEL
+    const ready = this.readyToMarkUp.filter(product => product.new === true)
+    
+    
+    return this.createMarkUp(ready);
+  },
+  onshowNewProduct() {
+    const {dataset} = this.showNewProductEL
+    dataset.status === "on" ? dataset.status = "off": dataset.status = "on"  ;
+    const showNewProduct = dataset.status === "on";
+    const doNotShowNewProduct = dataset.status === "off";
+    if (showNewProduct) {
+      this.sortForNewProducts();
+    }
+    if (doNotShowNewProduct) {
+      this.readyToMarkUp = products,
+      this.createMarkUp(this.readyToMarkUp);
+      
+    }
   },
   onpriceSwitcher() {
     // this.readyToMarkUp = this.readyToMarkUp.sort((a, b) => a - b);
@@ -221,7 +244,8 @@ filters.priceSwitcher.addEventListener(
   "change",
   filters.onpriceSwitcher.bind(filters)
 );
-
+filters.showNewProductEL.addEventListener('change', filters.onshowNewProduct.bind(filters));
+console.log(filters.showNewProductEL)
 const currentSearch = JSON.parse(localStorage.getItem("inputLocallStorageKey"));
 // переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
 const currentSearchNewProducts = JSON.parse(
@@ -230,6 +254,7 @@ const currentSearchNewProducts = JSON.parse(
 if (currentSearch) {
   const selected = document.querySelector(`[data-category=${currentSearch}]`);
   selected.click();
+
   localStorage.removeItem("inputLocallStorageKey");
 }
 
@@ -238,5 +263,6 @@ if (currentSearchNewProducts) {
     `[data-category=${currentSearchNewProducts}]`
   );
   selected.click();
+  filters.showNewProductEL.click()
   localStorage.removeItem("inputLocallStorageKeyForNewProducts");
 }
