@@ -6,6 +6,14 @@ const question = {
       return;
     }
     const activeEl = document.querySelector(".active");
+    const iconEl = event.currentTarget.firstElementChild;
+    const iconElInOpenedState = document.querySelector(".opened");
+    if (iconElInOpenedState) {
+      iconElInOpenedState.classList.toggle("opened");
+      iconElInOpenedState.textContent = "+";
+    }
+    iconEl.classList.toggle("opened");
+    iconEl.textContent = "-";
 
     const currentTargetIsActive =
       event.currentTarget.nextElementSibling.classList.value ===

@@ -82,6 +82,13 @@
       background-color: transparent;
     }
   }
+  &__btn-icon {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 28px;
+    line-height: calc(22 / 18);
+    color: var(--main-title-color);
+  }
 }
 
 // .main-questions__svg {
