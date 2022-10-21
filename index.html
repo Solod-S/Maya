@@ -232,7 +232,7 @@
             <span class="--bold">Получи купон</span> со скидкой
             <span class="--bold">500 рублей</span> на первый заказ
           </h2>
-          <button class="main-discount__btn" type="button">
+          <button class="main-discount__btn" type="button" data-modal-open>
             Получить купон
           </button>
         </div>
@@ -518,9 +518,14 @@
         <div class="main-askus__wrapper container">
           <h2 class="main-askus__title">Не нашли ответ на свой вопрос?</h2>
           <p class="main-askus__text">Задайте его нам в WhatsApp</p>
-          <button class="main-askus__btn" type="button">
+          <a
+            class="main-askus__btn"
+            href="https://web.telegram.org/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             Спросить в Telegram
-          </button>
+          </a>
         </div>
       </section>
     </main>
@@ -530,25 +535,35 @@
         <h2 class="main-subscribe__title">Следите за нашими новинками</h2>
         <ul class="main-subscribe__list">
           <li class="main-subscribe__item">
-            <a class="main-subscribe__link" href="#">Каталог</a>
+            <a class="main-subscribe__link" href="./catalog.html">Каталог</a>
           </li>
           <li class="main-subscribe__item">
-            <a class="main-subscribe__link" href="#">Доставка</a>
+            <a class="main-subscribe__link" href="./delivery.html">Доставка</a>
           </li>
           <li class="main-subscribe__item">
-            <a class="main-subscribe__link" href="#">Оплата</a>
+            <a class="main-subscribe__link" href="./delivery.html">Оплата</a>
           </li>
         </ul>
         <ul class="social">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a
+              class="social__link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               <svg class="social__svg" width="57" height="57">
                 <use href="./img/symbol-defs.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a
+              class="social__link"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               <svg class="social__svg" width="58" height="57">
                 <use href="./img/symbol-defs.svg#icon-youtube"></use>
               </svg>
@@ -556,7 +571,12 @@
           </li>
 
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a
+              class="social__link"
+              href="https://web.telegram.org/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               <svg class="social__svg" width="58" height="57">
                 <use href="./img/symbol-defs.svg#icon-telegram"></use>
               </svg>
@@ -583,18 +603,19 @@
         <span class="copyright__number">8(800)-888-44-55</span>
       </div>
     </footer>
-    <!--ModalWindow-->
+    <!-- // /* -------------------------------------------------------------------------MODAL-WINDOW------------------------------------------------------------------------- */ -->
+
     <div class="bacdrop bacdrop--is-hidden container" data-modal>
       <div class="modal">
-        <button
+        <a
           class="modal__close-button"
           aria-label="закрыть-окно"
           data-modal-close
         >
           <svg class="modal__close-button-icon" width="11px" height="11px">
-            <use href="./images/symbol-defs.svg#icon-cross"></use>
+            <use href="./img/symbol-defs-modal.svg#icon-cross"></use>
           </svg>
-        </button>
+        </a>
         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
         <form class="modal__form">
           <div class="modal__form-field">
@@ -613,7 +634,7 @@
                 height="18px"
                 aria-label="Иконка имени"
               >
-                <use href="./images/symbol-defs.svg#icon-name-modal"></use>
+                <use href="./img/symbol-defs-modal.svg#icon-name-modal"></use>
               </svg>
             </span>
           </div>
@@ -633,7 +654,7 @@
                 height="18px"
                 aria-label="Иконка телефона"
               >
-                <use href="./images/symbol-defs.svg#icon-tell-modal"></use>
+                <use href="./img/symbol-defs-modal.svg#icon-tell-modal"></use>
               </svg>
             </span>
           </div>
@@ -653,7 +674,7 @@
                 height="18px"
                 aria-label="Иконка почты"
               >
-                <use href="./images/symbol-defs.svg#icon-mail-modal"></use>
+                <use href="./img/symbol-defs-modal.svg#icon-mail-modal"></use>
               </svg>
             </span>
           </div>
@@ -722,14 +743,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/notiflix@3.2.5/dist/notiflix-aio-3.2.5.min.js"></script>
     <script src="./js/main-feedback.js" type="module"></script>
-
     <script src="./js/main-catalog.js" type="module"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/main-questions.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="./js/modal.js" type="module"></script>
     <script>
       AOS.init();
     </script>

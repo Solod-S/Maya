@@ -30,7 +30,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background: $primaryWhiteColor;
+  background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -54,13 +54,16 @@
   &__close-button {
     @include hoverBtn();
     @include focusBtn();
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 8px;
     right: 8px;
     cursor: pointer;
     height: 30px;
     width: 30px;
-    background: $primaryWhiteColor;
+    background: #ffffff;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,7 +106,7 @@
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 
-    color: $labelColor;
+    color: #000000;
   }
   &__input {
     padding-left: 42px;
@@ -116,13 +119,13 @@
     transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     &:focus {
-      outline: 1px solid $primaryAccentColor;
+      outline: 1px solid #ffffff;
     }
   }
 
   &__input:focus + &__input-icon,
   &__input:hover + &__input-icon {
-    fill: $primaryAccentColor;
+    fill: #b95f76;
   }
   &__textarea-field {
     display: flex;
@@ -149,7 +152,7 @@
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
 
-    color: $labelColor;
+    color: #b95f76;
   }
   &__textarea-field ::placeholder {
     font-family: "Roboto", sans-serif;
@@ -167,7 +170,7 @@
     font-size: 12px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: $labelColor;
+    color: #000000;
     @media screen and (max-width: $breakpointBeeforeTell) {
       font-size: 10px;
     }
@@ -176,11 +179,11 @@
     }
   }
   &__checkbox-link {
-    color: $primaryAccentColor;
+    color: #b95f76;
   }
   &__checkbox-label:focus &__checkbox-square,
   &__checkbox-label:hover &__checkbox-square {
-    border-color: $primaryAccentColor;
+    border-color: #b95f76;
   }
   &__checkbox-label {
     display: flex;
@@ -199,12 +202,12 @@
     margin: -1px;
   }
   &__checkbox-field input:checked + &__checkbox-square {
-    background-image: url(../images/check.svg);
+    background-image: url(../../img/svg/check.svg);
     width: 16px;
     height: 15px;
     background-size: contain;
-    background-color: $primaryAccentColor;
-    border-color: $primaryAccentColor;
+    background-color: #b95f76;
+    border-color: #b95f76;
     background-origin: border-box;
   }
   &__checkbox-square {
@@ -231,8 +234,8 @@
     letter-spacing: 0.06em;
 
     cursor: pointer;
-    background-color: $primaryAccentColor;
-    color: $primaryWhiteColor;
+    background-color: #b95f76;
+    color: #ffffff;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

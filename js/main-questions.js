@@ -12,6 +12,7 @@ const question = {
       iconElInOpenedState.classList.toggle("opened");
       iconElInOpenedState.textContent = "+";
     }
+    console.log(event.currentTarget.textContent === "-");
     iconEl.classList.toggle("opened");
     iconEl.textContent = "-";
 
