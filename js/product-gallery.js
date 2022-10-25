@@ -1,11 +1,23 @@
-import products from "./catalog_data.js";
+import products from "./services/data/catalog_data.js";
+import optionsForLightbox from "./services/simpleLigthBox-options.js";
 const source = document.getElementById("entry-template").innerHTML;
+const template = Handlebars.compile(source);
+console.log(optionsForLightbox);
+const lightbox = new SimpleLightbox(".product-card__item ", optionsForLightbox);
+// const lightbox = new SimpleLightbox(".product-card__item ", {
+//   captionDelay: 200,
+//   showCounter: false,
+//   maxZoom: 3,
+//   scrollZoomFactor: 0.1,
+// });
 
-function FindCurrentCard() {
+const currentPage = {
+  productCard: document.querySelector(".product-card"),
+};
+
+function FindCurrentIndx() {
   const path = window.location.pathname;
-
   const page = path.split("/").pop();
-
   const pageNumber = [];
   for (let i of page.split("")) {
     if (i === ".") {
@@ -13,20 +25,11 @@ function FindCurrentCard() {
     }
     pageNumber.push(i);
   }
-
   return Number(pageNumber.join("")) - 1;
 }
-
-const template = Handlebars.compile(source);
-
-const sectionRefs = {
-  productCard: document.querySelector(".product-card"),
-};
-
-// sectionRefs.productCard.innerHTML = "";
-sectionRefs.productCard.insertAdjacentHTML(
+currentPage.productCard.insertAdjacentHTML(
   "beforeend",
-  template(products[FindCurrentCard()])
+  template(products[FindCurrentIndx()])
 );
 
 const sizesCheckbox = {
@@ -37,13 +40,14 @@ const sizesCheckbox = {
       active.classList.remove("active");
       active.previousElementSibling.dataset.status = "off";
     }
-    if (event.target.nextElementSibling === active) {
-      event.target.nextElementSibling.classList.remove(`active`);
-      event.target.dataset.status = "off";
+    const { target } = event;
+    if (target.nextElementSibling === active) {
+      target.nextElementSibling.classList.remove(`active`);
+      target.dataset.status = "off";
       return;
     }
-    event.target.nextElementSibling.classList.add("active");
-    event.target.dataset.status = "on";
+    target.nextElementSibling.classList.add("active");
+    target.dataset.status = "on";
   },
 };
 sizesCheckbox.checkboxForm.addEventListener(
@@ -51,49 +55,18 @@ sizesCheckbox.checkboxForm.addEventListener(
   sizesCheckbox.onCheckbox.bind(sizesCheckbox)
 );
 
-// если через чек боксы
-// const colorCheckbox = {
-//   checkboxForm: document.querySelector(`.product-card__color-form`),
-//   onCheckbox(event) {
-//     const active = colorCheckbox.checkboxForm.querySelector(".active");
-//     if (active) {
-//       active.classList.remove("active");
-//       active.previousElementSibling.dataset.status = "off";
-//     }
-//     if (event.target.nextElementSibling === active) {
-//       event.target.nextElementSibling.classList.remove(`active`);
-//       event.target.dataset.status = "off";
-//       return;
-//     }
-//     event.target.nextElementSibling.classList.add("active");
-//     event.target.dataset.status = "on";
-//   },
-// };
-// colorCheckbox.checkboxForm.addEventListener("change", colorCheckbox.onCheckbox);
 const colorCheck = {
   colorCheckElements: document.querySelectorAll(
     `.product-card__color-selector`
   ),
   oncolorCheck(event) {
-    // const currentColor = colorCheck.colorCheckElements.classList.contains(products[FindCurrentCard().color)
-    // if (currentColor) {
-    //   currentColor.classList.add('active')
-    // }
-    colorCheck.colorCheckElements.forEach((name) => {
-      const currentColor = products[FindCurrentCard()].color;
-      console.log(currentColor);
+    const { colorCheckElements } = this;
+    colorCheckElements.forEach((name) => {
+      const currentColor = products[FindCurrentIndx()].color;
       if (name.classList.contains(currentColor)) {
         name.classList.add("active");
       }
     });
   },
 };
-colorCheck.oncolorCheck();
-
-const lightbox = new SimpleLightbox(".product-card__item ", {
-  captionDelay: 200,
-  showCounter: false,
-  maxZoom: 3,
-  scrollZoomFactor: 0.1,
-});
-console.log(lightbox);
+colorCheck.oncolorCheck.call(colorCheck);

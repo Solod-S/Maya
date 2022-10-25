@@ -19,6 +19,8 @@
     gap: 20px;
   }
   &__item {
+    position: relative;
+    overflow: hidden;
     transform: scale(1);
     transition: filter 150ms linear, transform 250ms linear;
     &:nth-child(3n + 1) .main-novelties__text {
@@ -49,6 +51,6 @@
 
     text-transform: uppercase;
 
-    color: var(--secondary-title-color);
+    color: var(--primary-btn-color);
   }
 }

@@ -1,13 +1,17 @@
-import products from "./catalog_data.js";
+import products from "./services/data/catalog_data.js";
 const source = document.getElementById("entry-template").innerHTML;
-
 const template = Handlebars.compile(source);
+const currentSearch = JSON.parse(localStorage.getItem("inputLocallStorageKey"));
+// переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
+const currentSearchNewProducts = JSON.parse(
+  localStorage.getItem("inputLocallStorageKeyForNewProducts")
+);
+// переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
 const forFilter = {
   category: {},
   sizes: {},
   price: { from: 1, to: 9999 },
 };
-
 const itemsList = [];
 const filters = {
   readyToMarkUp: products,
@@ -21,6 +25,33 @@ const filters = {
   priceSwitcher: document.querySelector(`.window__price-checkbox`),
   priceSwitcherIcon: document.querySelector(".window__toggl-icon"),
   showNewProductEL: document.querySelector(".window__price-checkbox-new"),
+  checkingActiveCategoryForFilter() {
+    this.readyToMarkUp = products.filter((product) => {
+      for (let [name, value] of Object.entries(forFilter.category)) {
+        if (product.category === name && value === "on") {
+          return true;
+        }
+      }
+    });
+  },
+  checkingActiveSizesForFilter() {
+    this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
+      for (let size of product.sizes) {
+        for (let [name, value] of Object.entries(forFilter.sizes)) {
+          if (size === name && value === "on") {
+            return true;
+          }
+        }
+      }
+    });
+  },
+  checkingActivePriceDiapasons() {
+    this.readyToMarkUp = this.readyToMarkUp.filter(
+      (product) =>
+        product.price >= forFilter.price.from &&
+        product.price <= forFilter.price.to
+    );
+  },
   sortForMinPrice() {
     this.readyToMarkUp = _.sortBy(
       this.readyToMarkUp,
@@ -34,42 +65,33 @@ const filters = {
       this.readyToMarkUp,
       (product) => product.price
     ).reverse();
- 
+
     this.priceSwitcher.dataset.status = "min";
     return this.createMarkUp(this.readyToMarkUp);
   },
   sortForNewProducts() {
-    const {dataset} = this.showNewProductEL
-    const ready = this.readyToMarkUp.filter(product => product.new === true)
-    
-    
+    const ready = this.readyToMarkUp.filter((product) => product.new === true);
+
     return this.createMarkUp(ready);
   },
   onshowNewProduct() {
-    const {dataset} = this.showNewProductEL
-    dataset.status === "on" ? dataset.status = "off": dataset.status = "on"  ;
+    const { dataset, readyToMarkUp } = this.showNewProductEL;
+    dataset.status === "on"
+      ? (dataset.status = "off")
+      : (dataset.status = "on");
     const showNewProduct = dataset.status === "on";
     const doNotShowNewProduct = dataset.status === "off";
     if (showNewProduct) {
       this.sortForNewProducts();
     }
     if (doNotShowNewProduct) {
-      this.readyToMarkUp = products,
-      this.createMarkUp(this.readyToMarkUp);
-      
+      (readyToMarkUp = products), this.createMarkUp(readyToMarkUp);
     }
   },
   onpriceSwitcher() {
-    // this.readyToMarkUp = this.readyToMarkUp.sort((a, b) => a - b);
-    // _.sortBy(this.readyToMarkUp, this.readyToMarkUp.price);
-    // this.readyToMarkUp = _.sortBy(
-    //   this.readyToMarkUp,
-    //   (product) => product.price
-    // );
-
     const minPrice = this.priceSwitcher.dataset.status === "min";
     const maxPrice = this.priceSwitcher.dataset.status === "max";
-
+    const { sortForMaxPrice } = this;
     if (maxPrice) {
       this.sortForMaxPrice();
       this.priceSwitcherIcon.style = "transform: rotate(360deg)";
@@ -87,25 +109,25 @@ const filters = {
     if (forFilter.price.from === 0) {
       forFilter.price.from = 1;
     }
-    console.log(forFilter.price);
     this.filter();
   },
   onSearchInput(event) {
+    const { readyToMarkUp } = this;
     const onSearchInput = event.target.value.toLowerCase();
 
     const filterFind = products.filter((item) =>
       item.name.toLocaleLowerCase().includes(onSearchInput.trim())
     );
     if (filterFind.length === 0 || onSearchInput.length === 0) {
-      return this.createMarkUp(this.readyToMarkUp);
+      return this.createMarkUp(readyToMarkUp);
     }
-    this.createMarkUp(this.readyToMarkUp);
+    this.createMarkUp(readyToMarkUp);
     this.createMarkUp(filterFind);
   },
   createItemsList() {
     const entriesCategory = Object.entries(forFilter.category);
     const entriesSizes = Object.entries(forFilter.sizes);
-    // forFilter.category {bandage: 'on'} => [['bandage', 'on']]
+
     entriesCategory.forEach(([key, value]) => {
       if (value === "off" && itemsList.includes(key)) {
         const indexForRemove = itemsList.indexOf(key);
@@ -118,7 +140,6 @@ const filters = {
       if (value === "off" && itemsList.includes(key)) {
         const indexForRemove = itemsList.indexOf(key);
         itemsList.splice(indexForRemove, 1);
-        console.log(`!`);
       } else if (value === "on" && !itemsList.includes(key)) {
         itemsList.push(key);
       }
@@ -129,50 +150,20 @@ const filters = {
   filter() {
     const categoryActive = Object.values(forFilter.category).includes("on");
     const sizesActive = Object.values(forFilter.sizes).includes("on");
+
     if (categoryActive) {
-      this.readyToMarkUp = products.filter((product) => {
-        for (let [name, value] of Object.entries(forFilter.category)) {
-          // console.log(product.category, name, value);
-          if (product.category === name && value === "on") {
-            return true;
-          }
-        }
-      });
+      this.checkingActiveCategoryForFilter();
       if (sizesActive) {
-        this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
-          for (let size of product.sizes) {
-            for (let [name, value] of Object.entries(forFilter.sizes)) {
-              if (size === name && value === "on") {
-                return true;
-              }
-            }
-          }
-        });
+        this.checkingActiveSizesForFilter();
       }
     }
     if (!categoryActive) {
       this.readyToMarkUp = products;
     }
     if (sizesActive) {
-      this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
-        for (let size of product.sizes) {
-          for (let [name, value] of Object.entries(forFilter.sizes)) {
-            if (size === name && value === "on") {
-              return true;
-            }
-          }
-        }
-      });
+      this.checkingActiveSizesForFilter();
     }
-
-    this.readyToMarkUp = this.readyToMarkUp.filter((product) => {
-      if (
-        product.price >= forFilter.price.from &&
-        product.price <= forFilter.price.to
-      ) {
-        return true;
-      }
-    });
+    this.checkingActivePriceDiapasons();
     return this.createMarkUp(this.readyToMarkUp);
   },
 
@@ -183,43 +174,29 @@ const filters = {
     this.catalog.insertAdjacentHTML("beforeend", cardsEl);
   },
   changeStatusCatCheckboxes(event) {
-    if (event.target.checked) {
-      // console.log("Checkbox is checked..");
-      event.target.dataset.status = "on";
-    } else if (!event.target.checked) {
-      event.target.dataset.status = "off";
-      // console.log("Checkbox is not checked..");
+    const { checked, dataset } = event.target;
+    const { categoryCheckboxes } = this;
+    if (checked) {
+      dataset.status = "on";
+    } else if (!checked) {
+      dataset.status = "off";
     }
-    this.categoryCheckboxes.forEach((name) => {
+    categoryCheckboxes.forEach((name) => {
       forFilter.category[name.dataset.category] = name.dataset.status;
-      // console.log(
-      //   `имя категории:`,
-      //   name.dataset.category,
-      //   `статус:`,
-      //   name.dataset.status
-      // );
     });
 
     this.createItemsList();
   },
   changeStatusSizesCheckboxes(event) {
-    if (event.target.checked) {
-      // console.log("Checkbox is checked..");
-      event.target.dataset.status = "on";
-    } else if (!event.target.checked) {
-      event.target.dataset.status = "off";
-      // console.log("Checkbox is not checked..");
+    const { target } = event;
+    if (target.checked) {
+      target.dataset.status = "on";
+    } else if (!target.checked) {
+      target.dataset.status = "off";
     }
     this.sizesCheckboxes.forEach((name) => {
       forFilter.sizes[name.dataset.size] = name.dataset.status;
-      // console.log(
-      //   `имя категории:`,
-      //   name.dataset.size,
-      //   `статус:`,
-      //   name.dataset.status
-      // );
     });
-
     this.createItemsList();
   },
 };
@@ -244,13 +221,11 @@ filters.priceSwitcher.addEventListener(
   "change",
   filters.onpriceSwitcher.bind(filters)
 );
-filters.showNewProductEL.addEventListener('change', filters.onshowNewProduct.bind(filters));
-console.log(filters.showNewProductEL)
-const currentSearch = JSON.parse(localStorage.getItem("inputLocallStorageKey"));
-// переменная с сохраненым ключем с главной страницы (когда мы кликнули на главной на какую категорию мы хотим попасть)
-const currentSearchNewProducts = JSON.parse(
-  localStorage.getItem("inputLocallStorageKeyForNewProducts")
+filters.showNewProductEL.addEventListener(
+  "change",
+  filters.onshowNewProduct.bind(filters)
 );
+
 if (currentSearch) {
   const selected = document.querySelector(`[data-category=${currentSearch}]`);
   selected.click();
@@ -263,6 +238,6 @@ if (currentSearchNewProducts) {
     `[data-category=${currentSearchNewProducts}]`
   );
   selected.click();
-  filters.showNewProductEL.click()
+  filters.showNewProductEL.click();
   localStorage.removeItem("inputLocallStorageKeyForNewProducts");
 }

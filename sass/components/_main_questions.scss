@@ -34,7 +34,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 972px;
+    max-width: 972px;
     background-color: var(--background-btn-color);
     padding: 29px 81px;
     text-align: center;
@@ -44,7 +44,7 @@
     position: absolute;
     top: 90px;
     left: 0;
-    width: 972px;
+    max-width: 972px;
     background-color: var(--background-btn-color);
     padding: 29px 81px;
     text-align: center;
@@ -58,7 +58,7 @@
   }
   &__item {
     position: relative;
-    width: 972px;
+    max-width: 972px;
     padding: 29px 81px;
     display: flex;
     justify-content: space-between;

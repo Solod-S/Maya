@@ -132,6 +132,3 @@ modalWindow.form.addEventListener(
   "input",
   _.throttle(modalWindow.onFormInput.bind(modalWindow), 500)
 );
-
-console.log(modalWindow.openModalBtn);
-console.log(`aaaaa`);

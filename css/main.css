@@ -690,6 +690,8 @@ h4 {
   gap: 20px;
 }
 .main-novelties__item {
+  position: relative;
+  overflow: hidden;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-filter 150ms linear, -webkit-transform 250ms linear;
@@ -723,7 +725,7 @@ h4 {
   font-size: 20px;
   line-height: 1.2;
   text-transform: uppercase;
-  color: var(--secondary-title-color);
+  color: var(--primary-btn-color);
 }
 
 .main-discount {
@@ -886,7 +888,7 @@ h4 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 972px;
+  max-width: 972px;
   background-color: var(--background-btn-color);
   padding: 29px 81px;
   text-align: center;
@@ -896,7 +898,7 @@ h4 {
   position: absolute;
   top: 90px;
   left: 0;
-  width: 972px;
+  max-width: 972px;
   background-color: var(--background-btn-color);
   padding: 29px 81px;
   text-align: center;
@@ -910,7 +912,7 @@ h4 {
 }
 .main-questions__item {
   position: relative;
-  width: 972px;
+  max-width: 972px;
   padding: 29px 81px;
   display: -webkit-box;
   display: -ms-flexbox;
