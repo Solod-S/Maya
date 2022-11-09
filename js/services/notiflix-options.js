@@ -40,7 +40,7 @@ export default {
   },
 
   failure: {
-    background: "#b95f76",
+    background: "red",
     textColor: "#fff",
     childClassName: "notiflix-notify-failure",
     notiflixIconColor: "rgba(0,0,0,0.2)",
