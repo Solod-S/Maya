@@ -1,6 +1,6 @@
 const STORAGE_KEY = "inputLocallStorageKey";
-import optionsForNotiflix from "./services/notiflix-options.js";
-Notiflix.Notify.init(optionsForNotiflix);
+// import optionsForNotiflix from "./services/notiflix-options.js";
+// Notiflix.Notify.init(optionsForNotiflix);
 
 const modalWindow = {
   form: document.querySelector(".modal__form"),
@@ -49,7 +49,7 @@ const modalWindow = {
       feedback.value === "" ||
       pnone.value === ""
     ) {
-      Notiflix.Notify.failure("Внимание! Все поля должны быть заполнены.");
+      // Notiflix.Notify.failure("Внимание! Все поля должны быть заполнены.");
       console.log(`Внимание! Все поля должны быть заполнены`);
       return;
     }
@@ -61,9 +61,9 @@ const modalWindow = {
       body.classList.toggle("no-scroll");
     });
 
-    Notiflix.Notify.info(
-      "Мы собрали данные, скоро с Вами свяжиться наш менеджер"
-    );
+    // Notiflix.Notify.info(
+    //   "Мы собрали данные, скоро с Вами свяжиться наш менеджер"
+    // );
     console.log(`Мы собрали данные, скоро с Вами свяжиться наш менеджер`);
     console.log("Мы собрали данные ==>", saveData);
     event.currentTarget.reset();

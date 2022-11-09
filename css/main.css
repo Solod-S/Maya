@@ -1360,7 +1360,7 @@ h4 {
   border-radius: 4px;
 }
 .modal__input:focus {
-  outline: 1px solid #ffffff;
+  outline: 1px solid #b95f76;
 }
 .modal__input:focus + .modal__input-icon, .modal__input:hover + .modal__input-icon {
   fill: #b95f76;
