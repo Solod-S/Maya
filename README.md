@@ -9,7 +9,7 @@
 
 # Maya-shop Website
 
-![Barbershop](/public//img/1-min.jpg)
+![Maya-shop](/public//img/1-min.jpg)
 
 **Built using HTML5, JS, Handlebars, Lodash & Notiflix, Slick-slider**.
 
@@ -18,10 +18,10 @@ Sass, Handlebars and working with various libraries like Lodash, Notiflix...
 
 ## Demo
 
-![Barbershop](/public//img/maya.gif)
+![Maya-shop](/public//img/maya.gif)
 
 Check out the live demo of the website:
-[Barbershop Website Demo](https://solod-s.github.io/Maya/)
+[Maya-shop Website Demo](https://solod-s.github.io/Maya/)
 
 ## Semantic layout
 
@@ -51,8 +51,8 @@ users of assistive technologies.
 
 To get a local copy of the project up and running, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/solod-s/Barbershop.git`
-2. Navigate to the project directory: `cd Barbershop`
+1. Clone the repository: `git clone https://github.com/solod-s/Maya.git`
+2. Navigate to the project directory: `cd Maya`
 3. Open the `index.html` file in your web browser
 
 ## Contributing
