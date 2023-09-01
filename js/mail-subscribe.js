@@ -7,8 +7,8 @@ Notiflix.Notify.init(optionsForNotiflix);
     onSubscribeForm(event) {
       event.preventDefault();
       if (event.target.elements.email.value === "") {
-        Notiflix.Notify.failure("Внимание! Заполните поле ввода....");
-        console.log(`Внимание! Заполните поле ввода...`);
+        Notiflix.Notify.failure("Attention! Fill in the input field....");
+        console.log(`Attention! Fill in the input field....`);
         return;
       }
       const capturedData = new FormData(event.currentTarget);
@@ -17,7 +17,7 @@ Notiflix.Notify.init(optionsForNotiflix);
         saveData[key] = value;
       });
 
-      Notiflix.Notify.info("Спасибо за подписку =)");
+      Notiflix.Notify.info("Thanks for subscribing =)");
       console.log("Мы собрали данные ==>", saveData);
       event.currentTarget.reset();
       console.log(event.target.elements.email.value);

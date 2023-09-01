@@ -49,8 +49,8 @@ const modalWindow = {
       !feedback.value ||
       !pnone.value
     ) {
-      Notiflix.Notify.failure("Внимание! Все поля должны быть заполнены.");
-      console.log(`Внимание! Все поля должны быть заполнены`);
+      Notiflix.Notify.failure("Attention! All fields must be filled.");
+      console.log(`Attention! All fields must be filled.`);
       return;
     }
     const capturedData = new FormData(event.currentTarget);
@@ -62,10 +62,10 @@ const modalWindow = {
     });
 
     Notiflix.Notify.info(
-      "Мы собрали данные, скоро с Вами свяжиться наш менеджер"
+      "We have collected data, our manager will contact you soon"
     );
-    console.log(`Мы собрали данные, скоро с Вами свяжиться наш менеджер`);
-    console.log("Мы собрали данные ==>", saveData);
+    console.log(`We have collected data, our manager will contact you soon`);
+    console.log("We have collected data ==>", saveData);
     event.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
   },
